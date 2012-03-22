@@ -7,10 +7,10 @@
     <title> Exynex</title>
     
     <style>
-    html{
-background-image:url('https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash3/554276_347815065268906_100001212466505_1073366_567771327_n.jpg');
+    #header{
+     position:fixed; top:0px;  height:30px; width:895.99px; background-image:url(http://farm7.staticflickr.com/6120/6858216226_18b859f896_b.jpg);
+     padding-top:3px;
 }
-
 font{
  
  
@@ -18,11 +18,21 @@ color:#000000;
 
 
 }
+.content{
+margin-top:50px;
 
-.mov{
- left:3000px;
 }
- 
+
+
+@font-face {
+    font-family: roboto;
+    src: url('http://exynex.github.com/font/Roboto-Thin.ttf');
+}
+
+p.custom_font{
+ font-family: roboto; /* no .ttf */
+} 
+
 p
 {
 font-family:"Times New Roman";
@@ -32,30 +42,53 @@ a {text-decoration: none}
 #page {
   margin-left:auto;
   margin-right:auto;
-  width:1000px;
-  height:1500px
+  width:900px;
+  height:1500px;
+  background-color:white;
 }
 
+html{
+ 
+background-image:url(http://farm8.staticflickr.com/7071/7004506565_e2636a0580_b.jpg);
+}
 
+.icsbuttons{
+width:100px;
+background-color:white;
+ outline: 0; 
+
+}
+
+.nostylelist{
+
+list-style-type: none;
 
 
 
     </style>
  </head>  
 <!--Body-->
+
 <body style = "font-size: 1em; left:0px;" >
-<div id="page">
+<div id="page" style="backgound-color:white;">
 <!--title-->
-<div   align="center"> <div id='toobig' style = "font-size:   5em;"><p> <font size="21" face="comic sans ms"   color="#000000"><b>
+<div float="left" style="position:fixed; padding:10px; padding-left:20px; ">
+<div> <div id='toobig' style = "font-size:   5em;">
+
+<p> <font size="21"   color="#000000" face="courier new"><b>
 EXYNEX</b>
 </font>
 </p>
+
+</div>
 </div>
 </div> 
 
 <!-- Top links-->
-<div id="header" aling="left" style="background-image:url('https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash3/554276_347815065268906_100001212466505_1073366_567771327_n.jpg');
-; position:fixed; top:0px;  height:20px; width:1230px;"> <font >
+
+
+
+<div id="header" aling="left" style="padding-left:5px;"> <font >
 <b> Contact Me </b> 
 - 
 </font>  <a href="https://twitter.com/Exynex"><font> Twitter 
@@ -71,28 +104,25 @@ EXYNEX</b>
 </font>
  </a> 
  </a>
+ <hr style="top:10px; color:aqua;">
  </div>
+ 
 
 <!-- Side Menu-->
-<div id="menu" align="left" style=" float:left; position:fixed; top:100px; width:200px;" >
- <ul> 
+<div  style=" float:left; position:fixed; padding-left:px; top:100px; width:150px;" >
+ <ul class="nostylelist"> 
  <a href="http://exynex.github.com/"  >  <font   ><li>Home</li></font> </a> 
 
-<a href="http://exynex.github.com/projects/" ><font  > <li>Projects </li></font> </a>
-<a href="http://exynex.github.com/aboutme/" ><font > <li> About me </li></font> </a>
+<a href="http://exynex.github.com/projects/" ><font  >  <hr style="top:10px; color:aqua;"><li> Projects </li></font> </a>
+<a href="http://exynex.github.com/aboutme/" ><font > <hr style="top:10px; color:aqua;"> <li>About me </li></font> </a>
 
-    <a href="http://exynex.wordpress.com/"  >  <font  ><li>Blog</li></font> 
+    <a href="http://exynex.wordpress.com/"  >  <font  > <hr style="top:10px; color:aqua;"><li>Blog</li></font> 
     </a>
  </ul>
   </div>
+<!--About me-->
 
- <!--Page title--> 
-  <div  align="center" >
- <p> <font  > About Me </font> </p> </div>
-  
-<!--Main Body-->
-
- <div align="center"> 
+<div align="center"> 
  
  <img src="https://ffbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash2/s720x720/64336_341948379188908_100001212466505_1056616_1067520057_n.jpg
 " height="300" > </img> 
@@ -114,8 +144,15 @@ EXYNEX</b>
 </table>
 </div>
 </div>
+
+ <!--Page title--> 
  
- <!--Main Body ENDS-->
+ <div align="center"   style="padding-top:25px;">
+ 
+ <p> <font>About Me </font>
+ </p> 
+ </div>
+
  </div>
  </body>
  
