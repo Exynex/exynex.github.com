@@ -7,8 +7,10 @@
     <title> Exynex</title>
     
     <style>
-    
-
+    #header{
+     position:fixed; top:0px;  height:30px; width:895.99px; background-image:url(http://farm7.staticflickr.com/6120/6858216226_18b859f896_b.jpg);
+     padding-top:3px;
+}
 font{
  
  
@@ -16,6 +18,20 @@ color:#000000;
 
 
 }
+.content{
+margin-top:50px;
+
+}
+
+
+@font-face {
+    font-family: roboto;
+    src: url('http://exynex.github.com/font/Roboto-Thin.ttf');
+}
+
+p.custom_font{
+ font-family: roboto; /* no .ttf */
+} 
 
 p
 {
@@ -56,16 +72,14 @@ list-style-type: none;
 <body style = "font-size: 1em; left:0px;" >
 <div id="page" style="backgound-color:white;">
 <!--title-->
-<div float="left" style="position:fixed; ">
+<div float="left" style="position:fixed; padding:10px; padding-left:20px; ">
 <div> <div id='toobig' style = "font-size:   5em;">
-<table  margin="10px">
-<td>
-<p> <font size="21" face="comic sans ms"   color="#000000"><b>
+
+<p> <font size="21"   color="#000000" face="courier new"><b>
 EXYNEX</b>
 </font>
 </p>
-</td>
-</table>
+
 </div>
 </div>
 </div> 
@@ -74,7 +88,7 @@ EXYNEX</b>
 
 
 
-<div id="header" aling="left" style=" position:fixed; top:0px;  height:30px; width:900px; background-image:url(http://farm7.staticflickr.com/6120/6858216226_18b859f896_b.jpg)"> <font >
+<div id="header" aling="left" style="padding-left:5px;"> <font >
 <b> Contact Me </b> 
 - 
 </font>  <a href="https://twitter.com/Exynex"><font> Twitter 
@@ -95,7 +109,7 @@ EXYNEX</b>
  
 
 <!-- Side Menu-->
-<div  style=" float:left; position:fixed; top:100px; width:150px;" >
+<div  style=" float:left; position:fixed; padding-left:px; top:100px; width:150px;" >
  <ul class="nostylelist"> 
  <a href="http://exynex.github.com/"  >  <font   ><li>Home</li></font> </a> 
 
@@ -108,12 +122,12 @@ EXYNEX</b>
   </div>
 
  <!--Page title--> 
-  <div  align="center">
+ 
+ <div align="center"   style="padding-top:25px;">
+ 
  <p> <font>Home </font>
  </p> 
  </div>
-
-
 
  </div>
  </body>
