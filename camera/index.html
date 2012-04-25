@@ -85,8 +85,8 @@ object {
 
 </style>
 
-<script type="text/javascript" src="camera/jquery.js"></script>
-<script type="text/javascript" src="camera/jQuery-webcam/jquery.webcam.js"></script>
+<script type="text/javascript" src="http://exynex.github.com/camera/jquery.js"></script>
+<script type="text/javascript" src="http://exynex.github.com/camera/jQuery-webcam/jquery.webcam.js"></script>
 
 </head>
 
@@ -107,9 +107,9 @@ object {
 <p id="status" style="height:22px; color:#c00;font-weight:bold;"></p>
 
 <div id="webcam">
-	<img src="camera/img/antenna.png" alt="" />
+	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" />
 	<span>jQuery</span>
-	<div><a onClick="toggleFilter(this);"><img src="camera/img/icon_filter.png" alt="" /></a></div>
+	<div><a onClick="toggleFilter(this);"><img src="http://exynex.github.com/camera/img/icon_filter.png" alt="" /></a></div>
 </div>
 
 <p style="width:360px;text-align:center; ">
@@ -150,7 +150,7 @@ jQuery("#webcam").webcam({
 	width: 320,
 	height: 240,
 	mode: "callback",
-	swffile: "jQuery-webcam/jscam_canvas_only.swf",
+	swffile: "http://exynex.github.com/camera/jQuery-webcam/jscam_canvas_only.swf",
 
 	onTick: function(remain) {
 
@@ -334,7 +334,7 @@ window.addEventListener("load", function() {
 		ctx.clearRect(0, 0, 320, 240);
 
 		var img = new Image();
-		img.src = "camera/img/logo.gif";
+		img.src = "http://exynex.github.com/camera/img/logo.gif";
 		img.onload = function() {
 			ctx.drawImage(img, 129, 89);
 		}
