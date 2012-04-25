@@ -156,13 +156,14 @@ object {
 </div>
 
 <p style="width:360px;text-align:center; ">
-<a href="javascript:webcam.capture(3);changeFilter();void(0);">Take a picture after 3 seconds</a> | 
-<a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture instantly</a>
+<button href="javascript:webcam.capture();changeFilter();void(0);">Take a picture</button> |
+<button href="javascript:webcam.capture(3);changeFilter();void(0);"> Timer</button>
+
 </p>
 
 <p><canvas id="canvas" height="240" width="320"></canvas></p>
 
-<ul id="cams"></ul>
+
 
 <script type="text/javascript">
 
