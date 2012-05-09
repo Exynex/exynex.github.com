@@ -97,7 +97,7 @@
 	background-size: cover;
 }
 .page.cover-back .back .content{
-	background: #B0D5FF;
+	background: aqua;
 }
 .page.cover h1{
 	color: rgba(255,255,255,0.9);
@@ -239,10 +239,10 @@ a.f-ref{
 	cursor: pointer;
 }
 .img-cont{
-	height: 40%;
+	height: 100%;
 	width: 100%;
 	background-repeat: no-repeat;
-	background-position: top center;
+	background-position: center;
 	background-size: cover;
 }
 .img-1{
