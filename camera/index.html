@@ -145,14 +145,15 @@ object {
 	<section>
 
 
-<h2>Take a picture!! :)</h2>
+<h2><font face="arial">"Take a picture!! :)</font></h2>
 
 <p id="status" style="height:22px; color:#c00;font-weight:bold;"></p>
 
 <div id="webcam">
-	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" />
+<!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" />-->
 	<span>EXYNEX</span>
-	<div><a onClick="toggleFilter(this);"><img src="http://exynex.github.com/camera/img/icon_filter.png" alt="" /></a></div>
+	<div><a onClick="toggleFilter(this);"><img src="http://exynex.github.com/camera/img/icon_filter.png" alt="" /></a>
+	</div>
 </div>
 
 <p style="width:360px;text-align:center; ">
@@ -174,6 +175,8 @@ var image = null;
 
 var filter_on = false;
 var filter_id = 0;
+
+var dataURL = canvas.toDataURL("image/png");
 
 function changeFilter() {
 	if (filter_on) {
@@ -397,10 +400,29 @@ window.addEventListener("resize", function() {
 
 }, false);
 
+
+/*
+var window = window.open();
+window.document.write('<img src="'+dataURL+'"/>');
+
+$('a.my-link').click(function(){
+  open().document.write('<img src="'+dataURL+'"/>');
+  return false;
+});
+*/
+
 </script>
 
 
 </div>
+
+
+<div>
+<a href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADwCAYAAABxLb1rAAADJUlEQVR4nO3UMQEAAAiAMPuX1hgebAm4mAWImu8AgC8GCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkHVa/ZYGT9KYyQAAAABJRU5ErkJggg==">
+Image
+</a>
+</div>
+
 </body>
 
 <html>
