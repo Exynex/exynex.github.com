@@ -1,5 +1,5 @@
 void setup() {
-  size(screenWidth, 150);
+  size(screenWidth, 15);
   colorMode(HSB, width, 100, 100, 1);
   smooth();
 }
