@@ -1,9 +1,14 @@
 ﻿                         EXYNEX (exynex.github.com)
                              Owner: Kevin GIl
                             Colaborators: none 
+v2.1.3.01  6.2.12
 
+-uploading some files for the upcoming new design
+-color theme is changing from aqua to magenta
+	it will look something like the openFrameworks site
+	im not usign any of their style sheets!!
 
-v2.1.3  6.1.12
+v2.1.3     6.1.12
 -github for windwos was being stupid, fixed it tho
 -added some files like processing.js and some pde's 
 -changed the header for a really cool one using processing.js this time, 
