@@ -12,7 +12,7 @@ size(screenWidth, 150);
 void draw() {
 
   fill(value);
-
+translate(mouseX, mouseY)
   ellipse(mouseX, mouseY, 50, 50);
 
 }

@@ -64,9 +64,9 @@ font-size:25px;
 <li><a target="_parent" href="http://exynex.github.com">photography</a></li>
 <li><a target="_parent" href="http://exynex.github.com">about me</a></li>
 <li><a target="_parent" href="http://exynex.tumblr.com">blog</a></li>
-</ul>
+</ul>  
 </div> 
-<div class="info" align="right">
+<div class="info" style="width:70px; right-padding:0px;">
 <img align="center"src="http://distilleryimage1.s3.amazonaws.com/5bec52cc820b11e180d51231380fcd7e_7.jpg" style="height:50px; padding-top:20px;"></img> 
 </div>
 
@@ -83,17 +83,6 @@ font-size:25px;
 <li>flickr</li>
 <li>youtube</li>
 </ul>
-<button class="hideme">hide</button>
-<script>
-  $("button.hideme").click(function () {
-    if ($("div.me:first").is(":hidden")) {
-      $("div.me").show("fast");
-    } else {
-      $("div.me").slideUp();
-    }
-  });
-
-  </script>
 
 
 
@@ -106,7 +95,7 @@ $("div.info").click(function () {
 if ($("div.me:first").is(":hidden")) {
 $("div.me").slideDown("fast");
 } else {
-$("div.me").hide();
+$("div.me").slideUp("fast");
 }
 });
 
