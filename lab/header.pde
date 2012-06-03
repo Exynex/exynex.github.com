@@ -13,6 +13,7 @@ void setup() {
  
 void draw()
 {
+   
   float  xc = 25;
  
   // Enable this to control the speed of animation regardless of CPU power
@@ -48,4 +49,6 @@ void draw()
  
   // display the results
   image(pg, 0, 0, width, height);
+  
+  
 }
