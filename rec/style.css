@@ -22,7 +22,14 @@ color:magenta;
 background-color: white; 
 text-decoration:none;}
 
-a:hover {background-color: magenta; color:white;}
+a:visited {
+color:magenta;
+text-decoration:none;
+}
+
+a:hover {
+background-color: magenta;
+ color:white;}
 
 
 //for header
