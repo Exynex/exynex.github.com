@@ -5,49 +5,16 @@
     <meta charset = "utf-8">
     <title> Exynex</title>
    
-	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+	<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
 <!--
     //META TAGG USED AS DEBUGGER AND GIVE SOME SORT OF LIVE PREVIEW ;)
     <meta http-equiv="refresh" content="0;url=http://exynex.github.com/projects/" />
   -->  
   
-  <style>
-
-p.home{background-color:magenta;font-size:25px;
-font-family:Arial;color:white;}
-
-#body{width:800px;}
-
-#nav{padding-top:0x; position:fixed;}
-#nav ul
-{
-margin: 0;
-padding: 0;
-list-style-type: none;
-text-align: center;
-
-}
-
-#nav ul li { display: inline; }
-
-#nav ul li a
-{
-text-decoration: none;
-padding: .2em 1em;
-color: gray;
-background-color: ;
-font-family:Arial;
-}
-
-#nav ul li a:hover
-{
-color: white;
-background-color: magenta;
-font-family:Arial;
-font-size:25px;
-  </style>
+  <link rel="stylesheet" type="text/css" href="http://exynex.github.com/rec/style.css" />
   
   <script src="http://code.jquery.com/jquery-latest.js"></script>
+ 
 
   
  </head>  
@@ -57,41 +24,29 @@ font-size:25px;
 <div id="body">
 
 <div id="nav">
+<div class="me" style="display:none;">
+<iframe class="me" scrolling="no" border="none" src="file:///C:/Users/Kevin%20GIl/Documents/GitHub/exynex.github.com/lab/contactme.html">
+</iframe>
+</div>
+
 <p style="font-family:Arial;" align="left"><font color="magenta">e</font><font color="gray">xy</font><font color="magenta">n</font><font color="gray">ex</font></a></p>
 <ul>
-<li><a target="_parent" href="http://exynex.github.com">home</a></li>
-<li><a target="_parent" href="http://exynex.github.com">projects</a></li>
-<li><a target="_parent" href="http://exynex.github.com">photography</a></li>
-<li><a target="_parent" href="http://exynex.github.com">about me</a></li>
+<li><a target="_parent" href="http://exynex.github.com/index.html">home</a></li>
+<li><a target="_parent" href="http://exynex.github.com/projects.html">projects</a></li>
+<li><a target="_parent" href="http://exynex.github.com/photography.html">photography</a></li>
+<li><a target="_parent" href="http://exynex.github.com/aboutme.html">about me</a></li>
 <li><a target="_parent" href="http://exynex.tumblr.com">blog</a></li>
-</ul>  
+<li><a href="#" class="info">contact</a></li>
+
+</ul> 
 </div> 
-<div class="info" style="width:70px; right-padding:0px;">
-<img align="center"src="http://distilleryimage1.s3.amazonaws.com/5bec52cc820b11e180d51231380fcd7e_7.jpg" style="height:50px; padding-top:20px;"></img> 
 </div>
 
 </div>
-</div>
 
-<div class="me" style="display:none;">
-<ul >
-<li>github</li>
-<li>facebook</li>
-<li>twitter</li>
-<li>google +</li>
-<li>openProcessing</li>
-<li>flickr</li>
-<li>youtube</li>
-</ul>
-
-
-
-</div>
-
-<script>
     
-	
-$("div.info").click(function () {
+<script>	
+$("a.info").click(function () {
 if ($("div.me:first").is(":hidden")) {
 $("div.me").slideDown("fast");
 } else {

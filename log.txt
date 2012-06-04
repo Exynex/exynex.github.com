@@ -1,6 +1,15 @@
 ﻿                         EXYNEX (exynex.github.com)
                              Owner: Kevin GIl
-                            Colaborators: none 
+                             Colaborators: none
+
+v3.0a                           
+-adding so many stuff for the new design :)
+-new header
+-new files
+-now using more the advantages of the <head>
+ like css embed scripts
+-making the folder names more efficient :)
+
 v2.1.3.01  6.2.12
 
 -uploading some files for the upcoming new design
