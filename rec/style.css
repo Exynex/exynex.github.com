@@ -4,6 +4,12 @@ width:800px;
 font-family;Arial;
 color:gray;}
 
+p {
+color:gray;
+font-family:Arial;
+
+}
+
 p.text{
 color:gray;
 font-family:Arial;
