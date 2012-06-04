@@ -2,7 +2,7 @@
 #body{
 width:800px;
 font-family;Arial;
-
+color="gray;"
 }
 
 div {
@@ -60,6 +60,7 @@ width:800px;
 color:gray;
 font-family:Arial;
 text-align:left;
+color="gray;"
 }
 #myinfo ul li { display: inline; }
 #myinfo ul li img {border-color;white;}
