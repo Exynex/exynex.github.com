@@ -2,10 +2,12 @@
 #body{
 width:800px;
 font-family;Arial;
-color:gray;
+
 }
 
-
+div {
+color="gray;"
+}
 
 
 
@@ -14,6 +16,7 @@ color:gray;
 
 #nav{padding-top:0x;
 positon:fixed;
+color="gray;"
 }
 #nav ul
 {
