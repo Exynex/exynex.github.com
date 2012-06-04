@@ -2,15 +2,13 @@
 #body{
 width:800px;
 font-family;Arial;
-color="gray;"
-}
+color:gray;}
 
 div {
-color="gray;"
-}
+color:gray;}
 
 p.text{
-color="gray;"
+color:gray;
 font-family:Arial;
 
 }
@@ -21,7 +19,7 @@ font-family:Arial;
 
 #nav{padding-top:0x;
 positon:fixed;
-color="gray;"
+color:gray;
 }
 #nav ul
 {
@@ -65,7 +63,7 @@ width:800px;
 color:gray;
 font-family:Arial;
 text-align:left;
-color="gray;"
+color:gray;
 }
 #myinfo ul li { display: inline; }
 #myinfo ul li img {border-color;white;}
