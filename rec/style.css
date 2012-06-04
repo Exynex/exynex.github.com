@@ -11,6 +11,11 @@ font-family:Arial;
 }
 
 
+a:link { color:magenta; background-color: white; }
+
+a:hover {background-color: magenta; color:white;}
+
+
 //for header
 
 

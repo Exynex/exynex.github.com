@@ -1,28 +1,34 @@
 <!DOCTYPE html >
 <html >
- 
 <head>  
-    <meta charset = "utf-8">
-    <title> Exynex</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
-<!--
-    <meta http-equiv="refresh" content="0;url=http://exynex.github.com/projects/" />
-  -->  
- </head>  
+   <meta charset = "utf-8">
+   <title> Exynex</title>
+   <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+   <link rel="stylesheet" type="text/css" href="http://exynex.github.com/rec/style.css" />
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>  
 <!--Body-->
 <body style="margin: 0px;">
-
-<div>
-<iframe id="header"  src="http://exynex.github.com/rec/embed/header" ></iframe>
+<div align="center">
+<div id="body" style="width:800px;">
+<div id="nav">
+<div class="me" style="display:none;">
+<iframe class="me" scrolling="no" border="none" src="http://exynex.github.com/rec/embed/contactme.html">
+</iframe>
 </div>
-
-<!-- ////////////////////////////CONTENT.STARTS//////////////////////////////-->
+<p style="font-family:Arial;" align="left"><font color="magenta">e</font><font color="gray">xy</font><font color="magenta">n</font><font color="gray">ex</font></a></p>
+<ul>
+<li><a target="_parent" href="http://exynex.github.com/p/index.html">home</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/projects.html">projects</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/photography.html">photography</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/aboutme.html">about me</a></li>
+<li><a target="_parent" href="http://exynex.tumblr.com">blog</a></li>
+<li><a href="#" class="info">contact</a></li>
+</ul> 
+</div> <!--#nav-->
 <!--SOME EPTY SPACE-->
- <div  align="center" style="padding-top:150px;" id="iconhome"></div>
+ <div  align="center" style="padding-top:75px;" id="iconhome"></div>
 <!--SOME EMPTY SPACE ENDS-->
-  
-   
 
 
 
@@ -53,17 +59,21 @@ Thanks to <a href="hhtp://bavc.org">BAVC</a> I'll be working with the guys from 
    
    <!--  ///////////////////////////////////////////////CONTENT  ENDS////////////////////////////////////////////////////-->
    
- </body>
- 
- 
- 
-<!--<script language="javascript" src="
-http://code.jquery.com/jquery-latest.js
-"></script>
-    <script language="javascript">
+</div> <!--aligns in the middle-->
+</div> <!-- body div -->
+
     
-showElement('#div1', function() {
-    console.log('myElement is now visible');
+<script>	
+$("a.info").click(function () {
+if ($("div.me:first").is(":hidden")) {
+$("div.me").slideDown("fast");
+} else {
+$("div.me").slideUp("fast");
+}
 });
-    </script>-->
-  </html>
+
+</script>
+
+
+</body>
+</html>
