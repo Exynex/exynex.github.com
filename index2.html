@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<<!DOCTYPE html >
 <html >
 <head>  
    <meta charset = "utf-8">
@@ -6,16 +6,19 @@
    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
    <link rel="stylesheet" type="text/css" href="http://exynex.github.com/rec/style.css" />
    <script src="http://code.jquery.com/jquery-latest.js"></script>
-   <script src="file:///C:/Users/Kevin%20GIl/Documents/GitHub/exynex.github.com/rec/embed/header.js"></script>
 </head>  
 <!--Body-->
 <body style="margin: 0px;">
 <div align="center">
 <div id="body" style="width:800px;">
 <div id="nav">
+<div class="me" style="display:none;">
+<iframe class="me" scrolling="no" border="none" src="http://exynex.github.com/rec/embed/contactme.html">
+</iframe>
+</div>
 <p style="font-family:Arial;" align="left"><font color="magenta">e</font><font color="gray">xy</font><font color="magenta">n</font><font color="gray">ex</font></a></p>
 <ul>
-<li><a target="_parent" href="http://exynex.github.com/index.html">home</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/index.html">home</a></li>
 <li><a target="_parent" href="http://exynex.github.com/p/projects.html">projects</a></li>
 <li><a target="_parent" href="http://exynex.github.com/p/photography.html">photography</a></li>
 <li><a target="_parent" href="http://exynex.github.com/p/aboutme.html">about me</a></li>
@@ -23,9 +26,21 @@
 <li><a href="#" class="info">contact</a></li>
 </ul> 
 </div> <!--#nav-->
+
+
+
+
+
+
+
+
+
+
+
 </div> <!--aligns in the middle-->
 </div> <!-- body div -->
 
+    
 <script>	
 $("a.info").click(function () {
 if ($("div.me:first").is(":hidden")) {
@@ -36,5 +51,7 @@ $("div.me").slideUp("fast");
 });
 
 </script>
+
+
 </body>
 </html>

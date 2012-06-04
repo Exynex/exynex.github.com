@@ -1,4 +1,4 @@
-$("div.lol").append("
+$("div.lol").prepend("
 
 
 <div id="nav">
