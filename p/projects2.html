@@ -1,0 +1,233 @@
+<!DOCTYPE html >
+<html >
+<head>  
+   <meta charset = "utf-8">
+   <title> Exynex</title>
+   <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+   <link rel="stylesheet" type="text/css" href="http://exynex.github.com/rec/style.css" />
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>  
+<!--Body-->
+<body style="margin: 0px;">
+<div align="center">
+<div id="body" style="width:800px;">
+<div id="nav">
+<div class="me" style="display:none;">
+<iframe class="me" scrolling="no" border="none" src="http://exynex.github.com/rec/embed/contactme.html">
+</iframe>
+</div>
+<p style="font-family:Arial;" align="left"><font color="magenta">e</font><font color="gray">xy</font><font color="magenta">n</font><font color="gray">ex</font></a></p>
+<ul>
+<li><a target="_parent" href="http://exynex.github.com/p/index.html">home</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/projects.html">projects</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/photography.html">photography</a></li>
+<li><a target="_parent" href="http://exynex.github.com/p/aboutme.html">about me</a></li>
+<li><a target="_parent" href="http://exynex.tumblr.com">blog</a></li>
+<li><a href="#" class="info">contact</a></li>
+</ul> 
+</div> <!--#nav-->
+<!--SOME EPTY SPACE-->
+ <div  align="center" style="padding-top:35px;" id="iconhome"></div>
+<!--SOME EMPTY SPACE ENDS-->
+<!--body starts-->
+
+<button class="bfrog">Frog</button>
+<button class="bnyan">Nyan</button>
+<button class="bsolar">Solar</button>
+<button class="bmirror">Mirror</button>
+<button class="bdraw">Draw</button>
+<button class="bcircles">Circles</button>
+
+
+<div class="frog" style="display:none;">
+ <div align="center">
+ <iframe width="718" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/55808/embed/?width=690&height=450&border=true"></iframe>
+</div>
+</div>
+
+<div class="nyan" style="display:none;">
+ <div align="center"> 
+ <iframe width="718" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/59219/embed/?width=690&height=450&border=true"></iframe>
+</div>
+</div>
+<div class="solar" style="display:none;">
+ <div align="center">
+<iframe width="1248" height="1000" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/57181/embed/?width=1220&height=920&border=true"></iframe>
+</div>
+</div>
+
+<div class="mirror" style="display:none; background-color:magenta;">
+<div align="center" height="700px">
+  <embed height="600px" width="800px" name="plugin" src="http://exynex.github.com/camera/jQuery-webcam/jscam.swf" type="application/x-shockwave-flash">
+</div>
+</div>
+
+<div class="draw" style="display:none;">
+<div align="center"> 
+ <iframe width="708" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/55798/embed/?width=680&height=450&border=true"></iframe>
+</div>
+</div>
+
+<div class="circles" style="display:none;">
+ <div align="center">
+<iframe width="728" height="580" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/59422/embed/?width=700&height=500&border=true"></iframe>
+ <p> <b><font face="Calibri"> NOTE</font></b><font face="Calibri"> Press SPACE or T to see what happens!!</font> </p></div>
+</div>
+
+
+
+<script>
+$("button.bfrog").click(function () {
+if ($("div.frog:first").is(":hidden")) {
+$("div.frog").slideDown("slow");
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+} else {
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+}
+});
+
+</script>
+<script>
+$("button.bdraw").click(function () {
+if ($("div.draw:first").is(":hidden")) {
+$("div.draw").slideDown("slow");
+$("div.frog").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+} else {
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+}
+});
+
+</script>
+
+<script>
+$("button.bsolar").click(function () {
+if ($("div.solar:first").is(":hidden")) {
+$("div.solar").slideDown("slow");
+$("div.frog").slideUp();
+$("div.mirror").slideUp();
+$("div.draw").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+} else {
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+}
+});
+
+</script>
+<script>
+$("button.bnyan").click(function () {
+if ($("div.nyan:first").is(":hidden")) {
+$("div.nyan").slideDown("slow");
+$("div.frog").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.draw").slideUp();
+} else {
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+}
+});
+
+</script>
+
+<script>
+$("button.bcircles").click(function () {
+if ($("div.circles:first").is(":hidden")) {
+$("div.circles").slideDown("slow");
+$("div.frog").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.draw").slideUp();
+$("div.nyan").slideUp();
+} else {
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+}
+});
+
+</script>
+
+<script>
+$("button.bmirror").click(function () {
+if ($("div.mirror:first").is(":hidden")) {
+$("div.mirror").slideDown("slow");
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+} else {
+$("div.frog").slideUp();
+$("div.draw").slideUp();
+$("div.mirror").slideUp();
+$("div.solar").slideUp();
+$("div.circles").slideUp();
+$("div.nyan").slideUp();
+}
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--body ends-->
+</div> <!--aligns in the middle-->
+</div> <!-- body div -->
+
+    
+<script>	
+$("a.info").click(function () {
+if ($("div.me:first").is(":hidden")) {
+$("div.me").slideDown("fast");
+} else {
+$("div.me").slideUp("fast");
+}
+});
+
+</script>
+
+
+</body>
+</html>
