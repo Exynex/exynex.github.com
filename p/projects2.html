@@ -6,6 +6,7 @@
    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
    <link rel="stylesheet" type="text/css" href="http://exynex.github.com/rec/style.css" />
    <script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script src="rec/projects.js"></script>
 </head>  
 <!--Body-->
 <body style="margin: 0px;">
@@ -31,7 +32,7 @@
 <!--SOME EMPTY SPACE ENDS-->
 <!--body starts-->
 
-<button class="bfrog">Frog</button>
+<button class="bfrog" style="color:magenta;">Frog</button>
 <button class="bnyan">Nyan</button>
 <button class="bsolar">Solar</button>
 <button class="bmirror">Mirror</button>
@@ -73,142 +74,6 @@
 <iframe width="728" height="580" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/59422/embed/?width=700&height=500&border=true"></iframe>
  <p> <b><font face="Calibri"> NOTE</font></b><font face="Calibri"> Press SPACE or T to see what happens!!</font> </p></div>
 </div>
-
-
-
-<script>
-$("button.bfrog").click(function () {
-if ($("div.frog:first").is(":hidden")) {
-$("div.frog").slideDown("slow");
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-} else {
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-}
-});
-
-</script>
-<script>
-$("button.bdraw").click(function () {
-if ($("div.draw:first").is(":hidden")) {
-$("div.draw").slideDown("slow");
-$("div.frog").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-} else {
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-}
-});
-
-</script>
-
-<script>
-$("button.bsolar").click(function () {
-if ($("div.solar:first").is(":hidden")) {
-$("div.solar").slideDown("slow");
-$("div.frog").slideUp();
-$("div.mirror").slideUp();
-$("div.draw").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-} else {
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-}
-});
-
-</script>
-<script>
-$("button.bnyan").click(function () {
-if ($("div.nyan:first").is(":hidden")) {
-$("div.nyan").slideDown("slow");
-$("div.frog").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.draw").slideUp();
-} else {
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-}
-});
-
-</script>
-
-<script>
-$("button.bcircles").click(function () {
-if ($("div.circles:first").is(":hidden")) {
-$("div.circles").slideDown("slow");
-$("div.frog").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.draw").slideUp();
-$("div.nyan").slideUp();
-} else {
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-}
-});
-
-</script>
-
-<script>
-$("button.bmirror").click(function () {
-if ($("div.mirror:first").is(":hidden")) {
-$("div.mirror").slideDown("slow");
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-} else {
-$("div.frog").slideUp();
-$("div.draw").slideUp();
-$("div.mirror").slideUp();
-$("div.solar").slideUp();
-$("div.circles").slideUp();
-$("div.nyan").slideUp();
-}
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-
 
 
 
