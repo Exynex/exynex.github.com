@@ -1,5 +1,5 @@
 
-$("button.bfrog").click(function () {
+$("a.bfrog").click(function () {
 if ($("div.frog:first").is(":hidden")) {
 $("div.frog").slideDown("slow");
 $("div.draw").slideUp();
@@ -18,7 +18,7 @@ $("div.nyan").slideUp();
 });
 
 
-$("button.bdraw").click(function () {
+$("a.bdraw").click(function () {
 if ($("div.draw:first").is(":hidden")) {
 $("div.draw").slideDown("slow");
 $("div.frog").slideUp();
@@ -37,7 +37,7 @@ $("div.nyan").slideUp();
 });
 
 
-$("button.bsolar").click(function () {
+$("a.bsolar").click(function () {
 if ($("div.solar:first").is(":hidden")) {
 $("div.solar").slideDown("slow");
 $("div.frog").slideUp();
@@ -56,7 +56,7 @@ $("div.nyan").slideUp();
 });
 
 
-$("button.bnyan").click(function () {
+$("a.bnyan").click(function () {
 if ($("div.nyan:first").is(":hidden")) {
 $("div.nyan").slideDown("slow");
 $("div.frog").slideUp();
@@ -74,7 +74,7 @@ $("div.nyan").slideUp();
 }
 });
 
-$("button.bcircles").click(function () {
+$("a.bcircles").click(function () {
 if ($("div.circles:first").is(":hidden")) {
 $("div.circles").slideDown("slow");
 $("div.frog").slideUp();
@@ -93,7 +93,7 @@ $("div.nyan").slideUp();
 });
 
 
-$("button.bmirror").click(function () {
+$("a.bmirror").click(function () {
 if ($("div.mirror:first").is(":hidden")) {
 $("div.mirror").slideDown("slow");
 $("div.frog").slideUp();
