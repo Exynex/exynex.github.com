@@ -9,7 +9,37 @@
 </head>  
 <!--Body-->
 <body style="margin: 0px;">
-<div align="center">
+<div class="webz" align="center">
+<p class="text" style="font-size:40px;">ATTENTION!!! This website is not done.</br>Still want to continue?</br>
+<table>
+<td><p class="text"style="font-size:35px;">
+<a class="si" href="#">Yes! Porfavor :) </a></td></p>
+<td  style="width:60px;">
+</td>
+<td><p class="text"style="font-size:35px;">
+<a class="no" href="#">No thank you... </a></td></p>
+</table>
+</p>
+</div>
+<script>
+ $("a.si").click(function () {
+    if ($("div.todo:first").is(":hidden")) {
+      $("div.todo").fadeIn("fast");
+	  $("div.webz").slideUp();
+    } else {
+      $("div.todo").slideUp("fast");
+    }
+  });
+  
+  $("a.no").click(function () {
+  $("div.webz").fadeOut("slow");
+  });
+
+  
+
+</script>
+
+<div class="todo" align="center"style=" display:none;">
 <div id="body" style="width:800px;">
 <div id="nav">
 <div class="me" style="display:none;">
@@ -32,11 +62,6 @@
 <!--body starts-->
 
 
-<div class="webnodone" align="center">
-<p class="text" style="font-size:40px;">ATTENTION!!! This website is not done.</br>Still want to continue?</p>
-<a href="javascript:self.close ();">No thanks, I'll come back later :)</a>
-</div>
-<a href="javascript:self.close ()">Close this Window</a>
 
 
 
@@ -68,21 +93,26 @@ Thanks to <a href="hhtp://bavc.org">BAVC</a> I'll be working with the guys from
  </td>
  </tr>
  </table>
-   </div> </div>  </br>
+ 
+ </br>
   <div align="center"> <table>
    <tr><th></th></tr>
    <tr>
  <td style="background-color:white; width:950px;height:1px;"><!--gray line in the bottom--></td><tr></table></div>
  </br>
+    
+<!--body ends-->   
+  </div> <!--aligns in the middle-->
+  </div> <!-- body div -->
+
+  
    
    
    
    
    
-   
-<!--body starts-->   
-</div> <!--aligns in the middle-->
-</div> <!-- body div -->
+
+
 
    
 
