@@ -1,7 +1,13 @@
 ﻿                         EXYNEX (exynex.github.com)
                              Owner: Kevin GIl
                              Colaborators: none
-
+v3.1.4
+-No the webiste looks finishes althought it's not (it never is ;))
+-no more pages. Everything is in one same index :D
+-TODO:
+  finish my resume.js
+  translate projects to JavaScript
+  add more projects
 v3.0a                           
 -adding so many stuff for the new design :)
 -new header
