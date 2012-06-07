@@ -28,22 +28,7 @@
 </table>
 
 </div>
-<script>
- $("a.si").click(function () {
-    if ($("div.todo:first").is(":hidden")) {
-      $("div.todo").fadeIn("fast");
-	  $("div.webz").slideUp();
-    } else {
-      $("div.todo").slideUp("fast");
-    }
-  });
-  
-  $("a.no").click(function () {
-  $("div.webz").fadeOut("slow");
-  });
 
-  
-</script>
 
 <div class="todo" align="center"style=" display:none;">
 <div id="body" style="width:800px;">
@@ -56,12 +41,12 @@
 </div>
 <p style="font-family:Arial;" align="left"><font color="magenta">e</font><font color="gray">xy</font><font color="magenta">n</font><font color="gray">ex</font></a></p>
 <ul>
-<li><a target="_parent" href="http://exynex.github.com/index.html">home</a></li>
-<li><a target="_parent" href="http://exynex.github.com/p/projects.html">projects</a></li>
-<li><a target="_parent" href="http://exynex.github.com/p/photography.html">photography</a></li>
-<li><a href="#aboutme" class="aboutme">about me</a></li>
+<li><a class="acasa" href="#home">home</a></li>
+<li><a class="aprojects" href="#projects">projects</a></li>
+<li><a class="aphotography" href="#photography">photography</a></li>
+<li><a class="aboutme" href="#aboutme" >about me</a></li>
 <li><a target="_parent" href="http://exynex.tumblr.com">blog</a></li>
-<li><a href="#contact" class="info">contact</a></li>
+<li><a class="info" href="#contact">contact</a></li>
 </ul> 
 </div> <!--#nav-->
 <!--SOME EPTY SPACE-->
@@ -73,8 +58,8 @@
 
 
 
- <div align="center"id="sec_home">
-    <div >   <table border="0" >   <tr>   <th style="width:550px;  valign="top">      </th>   <th style="width:20px;">   </th>   <th style="width:1px;">   <!--LINE.IN.TABLE-->   </th>      <th  style="width:335px;">   </th>   </tr>   <tr>   </tr>   <td>     
+ <div align="center" class="homie">
+    <div class="casa" >   <table border="0" >   <tr>   <th style="width:550px;  valign="top">      </th>   <th style="width:20px;">   </th>   <th style="width:1px;">   <!--LINE.IN.TABLE-->   </th>      <th  style="width:335px;">   </th>   </tr>   <tr>   </tr>   <td>     
 <div align="center">
  <font face="arial" size="3">
  <div style="width:500px;">
@@ -90,8 +75,8 @@ Thanks to <a href="hhtp://bavc.org">BAVC</a> I'll be working with the guys from
 
 
 </font></div></div>
-</div>
- <table>  <th style="height:50px; background-color:gary;">  </th>  </table>  </div>   </td>   <td> </td> <td style="background-color:gray;"><!--LINE.IN.TABLE--> </td><td>
+
+ <table>  <th style="height:50px; background-color:gary;">  </th>  </table>    </td>   <td> </td> <td style="background-color:gray;"><!--LINE.IN.TABLE--> </td><td>
  <div style="padding-left:10px;positoon:absolute ">
  <div align="center">
  <p class="text">Recent</p>
@@ -108,36 +93,114 @@ Thanks to <a href="hhtp://bavc.org">BAVC</a> I'll be working with the guys from
    <tr>
  <td style="background-color:white; width:950px;height:1px;"><!--gray line in the bottom--></td><tr></table></div>
  </br>
-    
+    </div>
+	</div>
+	
+	
+	
+	<div class="photography" style="display:none;">
+<p class="text">Photography</p>
+<!-- SnapWidget -->
+<iframe src="http://snapwidget.com/in/?u=ZXh5bmV4fGlufDE1MHw0fDEwfHx5ZXN8MTU=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:700px; height: 1750px" ></iframe>
+</div>
+
+  
+<div class="projects" style="display:none;">
+<div>
+<table>
+  <td>
+   <img src="http://exynex.github.com/rec/img/processing.png" style="width:120px;"border="0"></img>
+</td>
+   <td style="width:20px;">
+   </td>
+  
+<td>
+   <p class="text" style="left-padding:70px;">
+<a class="bfrog" href="#frog">Frog</a></br></br>
+<a class="bnyan" href="#nyan">Nyan</a> </br></br>
+<a class="bsolar" href="#solar">Solar</a>
+</p>
+</td>
+
+<td style="width:50px;">
+   </td>
+   <td>
+<P>
+<a class="bdraw" href="#draw">Draw</a> </br></br>
+<a class="bcircles" href="#circles">Circles</a></br></br></br>
+</p>
+</td>
+  <td style="width:20px;">
+   </td>
+ <td>
+<img src="http://exynex.github.com/files/img/web-icon.png" style="width:120px;"    border="0"></img>
+ </td>
+  <td style="width:20px;">
+   </td>
+ <td><p class="text">
+ <a class="bmirror" href="#mirror">Mirror</a> </br></br>
+ <a href="http://exynex.github.com/camera">Camera</a></br></br></br>
+ </p>
+ </td>
+   <td style="width:20px;">
+   </td>
+   </table></br>
+ </div>
+
+<div class="frog" style="display:none;">
+ <div align="center">
+ <iframe width="718" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/55808/embed/?width=690&height=450&border=true"></iframe>
+</div>
+</div>
+
+<div class="nyan" style="display:none;">
+ <div align="center"> 
+ <iframe width="718" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/59219/embed/?width=690&height=450&border=true"></iframe>
+</div>
+</div>
+<div class="solar" style="display:none;">
+ <div align="center">
+<iframe width="1248" height="1000" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/57181/embed/?width=1220&height=920&border=true"></iframe>
+</div>
+</div>
+
+<div class="mirror" style="display:none; background-color:magenta;">
+<div align="center" height="700px">
+  <embed height="600px" width="700px" name="plugin" src="http://exynex.github.com/camera/jQuery-webcam/jscam.swf" type="application/x-shockwave-flash">
+</div>
+</div>
+
+<div class="draw" style="display:none;">
+<div align="center"> 
+ <iframe width="708" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/55798/embed/?width=680&height=450&border=true"></iframe>
+</div>
+</div>
+
+<div class="circles" style="display:none;">
+ <div align="center">
+<iframe width="728" height="530" scrolling="no" frameborder="0" src="http://www.openprocessing.org/sketch/59422/embed/?width=700&height=500&border=true"></iframe>
+ <p class="text"> NOTE Press SPACE or T to see what happens!!</p></div>
+</div>
+
+<table>
+ <td>
+ <img src="http://exynex.github.com/files/img/android-white-logo.png" style="width:120px;" border="0"></img>
+ </td><td style="width:20px;"></td>
+ <td><p class="text">
+ <a href="http://www.mediafire.com/?bbdqepdek1fs5sq">Colorful Plasma.apk</a></br></br>
+ <a href="http://www.mediafire.com/?c9gc62il8aoq3h6">Silly Dots.apk</a></p></br></br></br>
+ </td>
+ 
+ </table>
+</div>
+
+
 <!--body ends-->   
   </div> <!--aligns in the middle-->
   </div> <!-- body div -->
-
-  
-   
-   
-   
-   
-   
-
-
-
-   
-
-   
-<script language="JavaScript" src="http://exynex.github.com/rec/contme.js"></script>
-<script>
-
-$("a.aboutme").click(function () {
-if ($("div.about:first").is(":hidden")) {
-$("div.about").slideDown("fast");
-$("div.me").slideUp("fast");
-} else {
-$("div.about").slideUp("fast");
-}
-});
-</script>
-
+ 
+ <script language="JavaScript" src="http://exynex.github.com/rec/navbar.js"></script>
+ <script language="JavaScript" src="http://exynex.github.com/rec/projects.js"></script>
 
 </body>
 </html>
