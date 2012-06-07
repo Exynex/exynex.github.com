@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html >
+<head>  
+   <meta charset = "utf-8">
+   <title> Exynex</title>
+   <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+   <link rel="stylesheet" type="text/css" href="http://exynex.github.com/rec/style.css" />
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>  
+<body>
+<div align="center">
+<div class="love"style="width:800px;">
+<p style="font-size:60px;">
+I love you Terilyn <3</br>Do you love me?</br>
+<a class="silove" href="#">Si! :)</a></p><table><td style="width:50px;"></td></table><p style="font-size:60px;"><a class="nolove" href="#">NO! :P</a>
+</p>
+</div>
+<div class="lovee" style="display:none;">
+<p style="font-size:120px;">Yay! :)
+</p>
+</div>
+<div class="nolovee" style="display:none;">
+<p style="font-size:120px;">:'(
+</p>
+</div>
+</div>
+
+<script>
+$("a.silove").click(function () {
+    if ($("div.lovee:first").is(":hidden")) {
+      $("div.lovee").fadeIn("fast");
+	  $("div.love").slideUp();
+    } else {
+      $("div.love").slideUp("fast");
+    }
+  });
+  
+
+  
+$("a.nolove").click(function () {
+    if ($("div.nolovee:first").is(":hidden")) {
+      $("div.nolovee").fadeIn("fast");
+	  $("div.love").slideUp();
+    } else {
+      $("div.love").slideUp("fast");
+    }
+  });
+
+</script>
+
+
+
+
+</body>
+</hmtl>
