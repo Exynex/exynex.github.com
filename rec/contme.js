@@ -5,6 +5,5 @@ $("div.me").slideDown("fast");
 $("div.about").slideUp("fast");
 } else {
 $("div.me").slideUp("fast");
-$("div.about")slideUp("fast");
 }
 });
