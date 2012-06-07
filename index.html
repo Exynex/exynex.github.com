@@ -28,39 +28,25 @@
 </table>
 
 </div>
-<script>
- $("a.si").click(function () {
-    if ($("div.todo:first").is(":hidden")) {
-      $("div.todo").fadeIn("fast");
-	  $("div.webz").slideUp();
-    } else {
-      $("div.todo").slideUp("fast");
-    }
-  });
-  
-  $("a.no").click(function () {
-  $("div.webz").fadeOut("slow");
-  });
-
-  
-
-</script>
+<script src="http://exynex.github.com/rec/sino.js"></script>
 
 <div class="todo" align="center"style=" display:none;">
 <div id="body" style="width:800px;">
 <div id="nav">
 <div class="me" style="display:none;">
-<iframe class="me" scrolling="no" border="none" src="http://exynex.github.com/rec/embed/contactme.html">
-</iframe>
+<iframe class="me" scrolling="no" border="none" src="http://exynex.github.com/rec/embed/contactme.html"></iframe>
+</div>
+<div class="about">
+<iframe scrolling="no" border="none" src="http://exynex.github.com/p/aboutme.html"></iframe>
 </div>
 <p style="font-family:Arial;" align="left"><font color="magenta">e</font><font color="gray">xy</font><font color="magenta">n</font><font color="gray">ex</font></a></p>
 <ul>
 <li><a target="_parent" href="http://exynex.github.com/index.html">home</a></li>
 <li><a target="_parent" href="http://exynex.github.com/p/projects.html">projects</a></li>
 <li><a target="_parent" href="http://exynex.github.com/p/photography.html">photography</a></li>
-<li><a target="_parent" href="http://exynex.github.com/p/aboutme.html">about me</a></li>
+<li><a href="#aboutme" class="aboutme">about me</a></li>
 <li><a target="_parent" href="http://exynex.tumblr.com">blog</a></li>
-<li><a href="#" class="info">contact</a></li>
+<li><a href="#contact" class="info">contact</a></li>
 </ul> 
 </div> <!--#nav-->
 <!--SOME EPTY SPACE-->
