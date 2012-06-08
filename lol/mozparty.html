@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+  <head>
+ 
+    <meta charset="utf-8">
+    <title>From 90's page to modern wed design </title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+
+  <body>
+
+
+
+      <style>
+        body {
+          font-family: Arial;
+          color: gray;
+          background-color:white;
+          text-align: center;
+        }
+
+
+
+        section {
+          background: white;
+		  color:gray;
+          border:none;
+          padding: 10px;
+        }
+
+        .content {
+          background: white;
+          padding: 20px;
+
+
+
+          /*
+          margin-top: 20px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+          */
+
+        }
+
+
+        #logo {
+          font-family: Arial;
+          font-size: 50px;
+		  color:gray;
+          background: white;
+          border: none;
+        }
+
+
+        nav {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+
+        nav a {
+		background: white;
+		color:gray;
+          font-size: 16px;
+          text-decoration: none;
+          background: white;
+          padding: 5px;
+        }
+		a {
+		background: white;
+		color:gray;
+          font-size: 16px;
+          text-decoration: none;
+          background: white;
+          padding: 5px;
+        }
+
+        nav a:hover {
+          color:magenta;
+          text-decoration: none;
+        }
+		 a:hover {
+          color:magenta;
+          text-decoration: none;
+        }
+
+
+        p {
+          font-size: 12px;
+        }
+
+        #masthead {
+          font-size: 18px;
+        }
+
+
+
+        #breadcrumbs {
+          text-align: left;
+        }
+        #breadcrumbs a {
+          color: blue;
+          text-decoration: none;
+        }
+        #breadcrumbs a:hover {
+          color: gray;
+          text-decoration: none;
+        }
+
+        #headlines h1 {
+          font-size: 36px;
+          font-family: Arial;
+        }
+
+
+
+        #headlines h2 {
+          font-size: 24px;
+          font-family: Arial;
+        }
+
+
+
+        #quote {
+          width: 300px;
+          font-family:Arial;
+        }
+      </style>
+
+
+  <div class="content">
+
+
+
+      <header id="logo">
+        Internet...!!! (new, now, and old)
+  </header>
+  <div class"iframes">
+  <div class="ipv4"style="display:none;">
+  <iframe height="500px" border="none" class="ipv4" src="http://en.m.wikipedia.org/wiki/Ipv4"></iframe>
+  </div>
+  <div class="ipv1" style="display:none;">
+  <iframe height="500px" border="none" class="ipv1" src="http://en.m.wikipedia.org/wiki/Ipv1"></iframe>
+  </div>
+  <div class="ipv6" style="display:none;">
+  <iframe height="500px" border="none" src="http://en.m.wikipedia.org/wiki/IPv6"></iframe>
+  </div>
+  </div>
+  <div class="nav">
+        <nav>
+          <a class="bipv1" href="#" >Old Internet</a>
+          <a class="bipv4" href="#">Now Internet</a>
+          <a class="bipv6" href="#"> New Internet</a>
+        </nav>
+    </div>
+	<script>
+	$("a.bipv6").click(function () {
+if ($("div.ipv6:first").is(":hidden")) {
+$("div.ipv6").slideDown("fast");
+$("div.ipv1").slideUp("fast");
+$("div.ipv4").slideUp("fast");
+} else {
+$("div.ipv6").slideUp("fast");
+}
+});
+
+$("a.bipv1").click(function () {
+if ($("div.ipv1:first").is(":hidden")) {
+$("div.ipv1").slideDown("fast");
+$("div.ipv6").slideUp("fast");
+$("div.ipv4").slideUp("fast");
+} else {
+$("div.ipv1").slideUp("fast");
+}
+});
+$("a.bipv4").click(function () {
+if ($("div.ipv4:first").is(":hidden")) {
+$("div.ipv4").slideDown("fast");
+$("div.ipv1").slideUp("fast");
+$("div.ipv6").slideUp("fast");
+} else {
+$("div.ipv4").slideUp("fast");
+}
+});
+
+	</script>
+
+      <section id="masthead">
+        Created by Kevin Gil
+      </section>
+
+      <section>
+        <a target="_blank"href="http://www.w3schools.com/">Learn more HTML</a>
+        &gt;
+        <a target="_blank" href="http://www.w3schools.com/css/default.asp">Learn More CSS</a>
+        &gt;
+       <a target="_blank" href="http://exynex.github.com/">Learn More About Kevin</a>
+      </section>
+
+      <section id="headlines">
+        <h1>Ahhh the 90's, awesome decade.</h1>
+        <h2>Except back then, the Web wasn't very pretty.</h2>
+        <h3>Everyone was using tables and websites were so boxy. People used a bunch of different fonts. There was flannel everywhere.</br>Just look! :</h3>
+<div align="center">
+<img src="http://designmagazine.us/wp-content/plugins/rss-poster/cache/46093_mosaic-web-browser-yahoo.jpg"></br>Internet in the 90's</img>
+</div>
+      </section>
+    </div>
+
+
+  </body>
+</html>
