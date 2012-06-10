@@ -69,7 +69,7 @@ $("div.me").slideUp("fast");
 
 window.load = fuinction() {
     if ($("div.todo:first").is(":hidden")) {
-	 $("div.webz").ffadeOut("slow");
+	 $("div.webz").fadeOut("slow");
       $("div.todo").fadeIn("slow");
 	 
     } 
