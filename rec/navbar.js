@@ -67,15 +67,10 @@ $("div.me").slideUp("fast");
 });
 
 
- $("a.si").click(function () {
+window.load = fuinction() {
     if ($("div.todo:first").is(":hidden")) {
-      $("div.todo").fadeIn("fast");
-	  $("div.webz").slideUp();
-    } else {
-      $("div.todo").slideUp("fast");
-    }
-  });
-  
-  $("a.no").click(function () {
-  $("div.webz").fadeOut("slow");
+	 $("div.webz").ffadeOut("slow");
+      $("div.todo").fadeIn("slow");
+	 
+    } 
   });
