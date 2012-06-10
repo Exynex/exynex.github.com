@@ -69,7 +69,7 @@ $("div.me").slideUp("fast");
 
   $(function() {
      if ($("div.todo:first").is(":hidden")) {
-	 $("div.webz").fadeOut("slow");
+	 $("div.webz").fadeOut("3500");
       $("div.todo").fadeIn("slow");
 	 
     } 
