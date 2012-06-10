@@ -67,7 +67,7 @@ $("div.me").slideUp("fast");
 });
 
 
-window.load = fuinction() {
+window.onload = function() {
     if ($("div.todo:first").is(":hidden")) {
 	 $("div.webz").fadeOut("slow");
       $("div.todo").fadeIn("slow");
