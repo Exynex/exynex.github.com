@@ -67,10 +67,10 @@ $("div.me").slideUp("fast");
 });
 
 
-window.onload = function() {
-    if ($("div.todo:first").is(":hidden")) {
+  $(function() {
+     if ($("div.todo:first").is(":hidden")) {
 	 $("div.webz").fadeOut("slow");
       $("div.todo").fadeIn("slow");
 	 
     } 
-  });
+});
