@@ -9,6 +9,8 @@
 </head>  
 <body>
 <div align="center">
+<!--    -->
+
 <div class="love"style="width:800px;">
 <p style="font-size:60px;">
 I love you Terilyn <3</br>Do you love me?</br>
@@ -16,14 +18,27 @@ I love you Terilyn <3</br>Do you love me?</br>
 <a class="silove" href="#">Si! :)</a></p></td><td style="width:120px;"></td><td><p style="font-size:60px;"><a class="nolove" href="#">NO! :P</a>
 </p></td></table>
 </div>
+
+<!--    -->
 <div class="lovee" style="display:none;">
 <p style="font-size:120px;">Yay! :)
+  <br>
+  Guess what?
+  <br><a class="wut" href="#">What? </a>
 </p>
 </div>
+
+<!--  nolove  -->
 <div class="nolovee" style="display:none;">
 <p style="font-size:120px;">:'(
 </p>
 </div>
+
+<!--  iluvtoo  -->
+<div class="iluvtoo" style="display:none;"><br><br>
+  <p style="font-size:120px;">I love you too!! :) </p>
+</div>
+
 </div>
 
 <script>
@@ -44,6 +59,16 @@ $("a.nolove").click(function () {
 	  $("div.love").slideUp();
     } else {
       $("div.love").slideUp("fast");
+    }
+  });
+
+ 
+$("a.wut").click(function () {
+    if ($("div.iluvtoo:first").is(":hidden")) {
+      $("div.iluvtoo").slideDown("fast");
+    $("div.lovee").fadeOut();
+    } else {
+      $("div.iluvtoo").fadeIn("fast");
     }
   });
 
