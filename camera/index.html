@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-<meta charset="utf-8" />
-<title> Exynex</title>
-
-<style type="text/css">
-
-
- body {
-        margin:0px;
-font-size: 1em; left:0px;
-        }
-        
-    #header{
-     
-}
-.content{margin-top:50px;}
-@font-face { font-family: roboto;  src: url('http://exynex.github.com/font/Roboto-Thin.ttf');}
-
-p.custom_font{font-family: roboto; /* no .ttf */} 
-
-
-p{font-family:"Times New Roman"; font-size:20px;}
-a {text-decoration: none;}
-
-body {margin-left:auto;margin-right:auto;  width:100%;   background-color:white;}
-
-html{/*background: url(http://instagram-static.s3.amazonaws.com/android/images/bg/body-big.png)  no-repeat center center fixed; -webkit-background-size: cover;     -moz-background-size: cover;     -o-background-size: cover background-size: cover;  height:1000px;-->*/}
-.icsbuttons{width:100px; background-color:white; outline: 0; }
-.nostylelist{list-style-type: none;}
-.bfont{ color="black" }
-
-
-
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html >
+<head>  
+   <meta charset = "utf-8">
+   <title>Camera by Kevin Gil & Kenneth Chan</title>
+   <meta name="description" content="Hello there stranger! Welcome to the this swagalicious website..."></meta>
+   <link rel="shortcut icon" href="../favicon.ico" />
+   <link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico" />
+   <link rel="icon" type="image/png" href="../icon.png" />
+   <link rel="icon" type="image/ico" href="../favicon.ico"/>
+   
+   <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+   <link rel="stylesheet" type="text/css" href="../rec/style.css" />
+   <script src="../lib/processing.js"></script>
+   <style type="text/css">
 #webcam, #canvas {
 	width: 320px;
 	border:20px solid #333;
@@ -115,26 +91,12 @@ object {
 
 </style>
 
-<script type="text/javascript" src="http://exynex.github.com/camera/jquery.js"></script>
-<script type="text/javascript" src="http://exynex.github.com/camera/jQuery-webcam/jquery.webcam.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jQuery-webcam/jquery.webcam.js"></script>
 
-</head>
-
-<body>
-
-<div>
-<iframe src="http://exynex.github.com/files/iframes/00002/index.html" style="width:100%; height:130px; border:none; position:fixed;">
-</iframe>
-</div>
-   
-   
-
-   <!--SOME EPTY SPACE-->
- <div  align="center" style="padding-top:150px;" id="iconhome">
-  </div>
-  <!--SOME EMPTY SPACE ENDS-->
-
-
+</head>  
+<!--Body-->
+<body style="margin: 0px;">
 <div align="center" > <div id="wrap">
 
 	
@@ -144,22 +106,18 @@ object {
 
 	<section>
 
-
-<h2><font face="arial">"Take a picture!! :)</font></h2>
-
-<p id="status" style="height:22px; color:#c00;font-weight:bold;"></p>
-
+<p style="font-size:30px;">This only works only with Chrome!</p>
 <div id="webcam">
 <!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" />-->
 	<span>EXYNEX</span>
-	<div><a onClick="toggleFilter(this);"><img src="http://exynex.github.com/camera/img/icon_filter.png" style="height:20px;" alt="" /></a>
+	<div><a onClick="toggleFilter(this);"><img src="img/icon_filter.png" style="height:20px;" alt="" /></a>
 	</div>
 </div>
 
 <p style="width:360px;text-align:center; ">
-<a href="javascript:webcam.capture();changeFilter();void(0);"><img src="http://exynex.github.com/files/img/camera.png"></img></a> 
-<!--<a href="javascript:webcam.capture(3);changeFilter();void(0);"> <img width="35px" height="35px;" src="http://exynex.github.com/files/img/clock.png"></img></a>
--->
+<a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br> 
+<a href="javascript:webcam.capture(3);changeFilter();void(0);"> With timer</a>
+
 </p>
 
 <p><canvas id="canvas" height="240" width="320"></canvas></p>
@@ -197,7 +155,7 @@ jQuery("#webcam").webcam({
 	width: 320,
 	height: 240,
 	mode: "callback",
-	swffile: "http://exynex.github.com/camera/jQuery-webcam/jscam_canvas_only.swf",
+	swffile: "jQuery-webcam/jscam_canvas_only.swf",
 
 	onTick: function(remain) {
 
@@ -412,20 +370,8 @@ $('a.my-link').click(function(){
 */
 
 </script>
-
-
 </div>
-
-
 <div>
-<!--
-<a href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADwCAYAAABxLb1rAAADJUlEQVR4nO3UMQEAAAiAMPuX1hgebAm4mAWImu8AgC8GCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkGWAQJYBAlkGCGQZIJBlgECWAQJZBghkGSCQZYBAlgECWQYIZBkgkHVa/ZYGT9KYyQAAAABJRU5ErkJggg==">
-Image
-</a>
-
--->
 </div>
-
 </body>
-
 <html>
