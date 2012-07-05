@@ -283,18 +283,9 @@ window.addEventListener("resize", function() {
 }, false);
 
 
-/*
-var window = window.open();
-window.document.write('<img src="'+dataURL+'"/>');
-
-$('a.my-link').click(function(){
-  open().document.write('<img src="'+dataURL+'"/>');
-  return false;
-});
-*/
 
 </script>
-<a id="savepngbtn">save as an image</a>
+<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, "PNG");">save as an image</a><br>
 <script type="text/javascript">
 var oCanvas = document.getElementById("canvas"); 
 
@@ -302,6 +293,7 @@ document.getElementById("savepngbtn").onclick = function() {
 		saveCanvas(oCanvas, "PNG");
 	}
 </script>
+
 </div>
 <div>
 </div>
