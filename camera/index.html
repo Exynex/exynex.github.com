@@ -40,7 +40,8 @@
 
 <p style="width:360px;text-align:center; ">
 <a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br> 
-<a href="javascript:webcam.capture(3);changeFilter();void(0);"> With timer</a>
+<a href="javascript:webcam.capture(3);changeFilter();void(0);">In 3 seconds..</a><br>
+<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, "PNG");">save as an image</a>
 
 </p>
 
@@ -285,7 +286,7 @@ window.addEventListener("resize", function() {
 
 
 </script>
-<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, "PNG");">save as an image</a><br>
+<br>
 <script type="text/javascript">
 
 	function convertCanvas(strType) {
