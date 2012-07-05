@@ -9,90 +9,14 @@
    <link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico" />
    <link rel="icon" type="image/png" href="../icon.png" />
    <link rel="icon" type="image/ico" href="../favicon.ico"/>
-   
    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
    <link rel="stylesheet" type="text/css" href="../rec/style.css" />
-   <script src="../lib/processing.js"></script>
-   <style type="text/css">
-#webcam, #canvas {
-	width: 320px;
-	border:20px solid #333;
-	background:#eee;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-}
-
-#webcam {
-	position:relative;
-	margin-top:50px;
-	margin-bottom:50px;
-}
-
-#webcam > span {
-	z-index:2;
-	position:absolute;
-	color:#eee;
-	font-size:10px;
-	bottom: -16px;
-	left:152px;
-}
-
-#webcam > img {
-	z-index:1;
-	position:absolute;
-	border:0px none;
-	padding:0px;
-	bottom:-40px;
-	left:89px;
-}
-
-#webcam > div {
-	border:5px solid #333;
-	position:absolute;
-	right:-90px;
-	padding:5px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	cursor:pointer;
-}
-
-#webcam a {
-	background:#fff;
-	font-weight:bold;
-}
-
-#webcam a > img {
-	border:0px none;
-}
-
-#canvas {
-	border:20px solid #ccc;
-	background:#eee;
-}
-
-#flash {
-	position:absolute;
-	top:0px;
-	left:0px;
-	z-index:5000;
-	width:100%;
-	height:500px;
-	background-color:#c00;
-	display:none;
-}
-
-object {
-	display:block; /* HTML5 fix */
-	position:relative;
-	z-index:1000;
-}
-
-</style>
-
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jQuery-webcam/jquery.webcam.js"></script>
+   <link rel="stylesheet" type="text/css" href="camera.css" />
+   <script type="text/javascript" src="../lib/processing.js"></script>
+   <script type="text/javascript" src="canvas2image.js"></script>
+   <script type="text/javascript" src="base64.js"></script>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="jQuery-webcam/jquery.webcam.js"></script>
 
 </head>  
 <!--Body-->
@@ -369,6 +293,14 @@ $('a.my-link').click(function(){
 });
 */
 
+</script>
+<a id="savepngbtn">save as an image</a>
+<script type="text/javascript">
+var oCanvas = document.getElementById("canvas"); 
+Canvas2Image.saveAsPNG(oCanvas); 
+document.getElementById("savepngbtn").onclick = function() {
+		saveCanvas(oCanvas, "PNG");
+	}
 </script>
 </div>
 <div>
