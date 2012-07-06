@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html >
+<html>
 <head>  
-   <meta charset = "utf-8">
+   <meta charset="utf-8" />
    <title>Camera by Kevin Gil & Kenneth Chan</title>
-   <meta name="description" content="Hello there stranger! Welcome to the this swagalicious website..."></meta>
+   <meta name="description" content="Hello there stranger! Welcome to the this swagalicious website..." />
    <link rel="shortcut icon" href="../favicon.ico" />
    <link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico" />
    <link rel="icon" type="image/png" href="../icon.png" />
@@ -21,32 +21,33 @@
 </head>  
 <!--Body-->
 <body style="margin: 0px;">
-<div align="center" > <div id="wrap">
+<div align="center"> <div id="wrap">
 
 	
 
 
-	<div id="main" >
+	<div id="main">
 
 	<section>
 
-<p style="font-size:30px;">This only works only with Chrome!</p><br>
+<p style="font-size:30px;">This only works only with Chrome!</p><br />
 <p style="font-size:15px;">When you download add the PNG extension to the file...</p>
 <table>
+<tr>
 <th>
 <div>
 <div id="webcam">
 <!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" /><p>Sorry, only works with Chrome</p>-->
 	<span>EXYNEX</span>
-	<div><a onClick="toggleFilter(this);"><img src="img/icon_filter.png" style="height:20px;" alt=""><p style="font-size:10px;">Filters</p></img></a>
+	<div><a onClick="toggleFilter(this);"><img src="img/icon_filter.png" style="height:20px;" alt="" /><p style="font-size:10px;">Filters</p></a>
 	</div>
 </div>
 
 
 <p style="width:360px;text-align:center; ">
-<a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br> 
-<a href="javascript:webcam.capture(3);changeFilter();void(0);">In 3 seconds..</a><br>
-<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, "PNG");">save as an image</a>
+<a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br /> 
+<a href="javascript:webcam.capture(3);changeFilter();void(0);">In 3 seconds..</a><br />
+<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, 'PNG');">save as an image</a>
 
 </p>
 </div>
@@ -56,6 +57,7 @@
 <th>
 <div><canvas id="canvas" height="240" width="320" ></canvas></div>
 </th>
+</tr>
 </table>
 
 <script type="text/javascript">
@@ -295,7 +297,7 @@ window.addEventListener("resize", function() {
 
 
 </script>
-<br>
+<br />
 <script type="text/javascript">
 
 	function convertCanvas(strType) {
@@ -345,9 +347,9 @@ document.getElementById("savepngbtn").onclick = function() {
 		saveCanvas(oCanvas, "PNG");
 	}
 </script>
-
+</section>
 </div>
-<div>
+</div>
 </div>
 </body>
-<html>
+</html>
