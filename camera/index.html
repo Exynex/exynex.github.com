@@ -32,12 +32,16 @@
 
 <p style="font-size:30px;">This only works only with Chrome!</p><br>
 <p style="font-size:15px;">When you download add the PNG extension to the file...</p>
+<table>
+<th>
+<div>
 <div id="webcam">
-<!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" />-->
+<!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" /><p>Sorry, only works with Chrome</p>-->
 	<span>EXYNEX</span>
 	<div><a onClick="toggleFilter(this);"><img src="img/icon_filter.png" style="height:20px;" alt=""><p style="font-size:10px;">Filters</p></img></a>
 	</div>
 </div>
+
 
 <p style="width:360px;text-align:center; ">
 <a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br> 
@@ -45,10 +49,14 @@
 <a id="savepngbtn" href="javascript:saveCanvas(oCanvas, "PNG");">save as an image</a>
 
 </p>
-
-<p><canvas id="canvas" height="240" width="320"></canvas></p>
-
-
+</div>
+</th>
+<th style="width:100px;">
+</th>
+<th>
+<div><canvas id="canvas" height="240" width="320" ></canvas></div>
+</th>
+</table>
 
 <script type="text/javascript">
 
