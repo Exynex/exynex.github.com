@@ -17,7 +17,25 @@
    <script type="text/javascript" src="base64.js"></script>
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="jQuery-webcam/jquery.webcam.js"></script>
-
+   <script type="text/javascript">
+     var i=3;
+	 function in3sec() {
+	 	 var myInterval = setInterval("countdown()",1000);
+     }
+	 
+	 function countdown() {
+		var ctx = document.getElementById("canvas").getContext("2d");
+		ctx.font="30px Arial";
+		if(i>0) {
+		  ctx.fillText(i+",",100-28*i,40);
+		  i--;
+		}
+		else {
+		  ctx.fillText("SMILE!",120,40);
+		  clearInterval(myInterval);
+		}
+	}
+   </script>
 </head>  
 <!--Body-->
 <body style="margin: 0px;">
@@ -46,7 +64,7 @@
 
 <p style="width:360px;text-align:center; ">
 <a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br /> 
-<a href="javascript:webcam.capture(3);changeFilter();void(0);">In 3 seconds..</a><br />
+<a href="javascript:clearRect(0,0,320,240);webcam.capture(3);changeFilter();void(0);" onclick="in3sec();">In 3 seconds..</a><br />
 <a id="savepngbtn" href="javascript:saveCanvas(oCanvas, 'PNG');">save as an image</a>
 
 </p>
@@ -55,7 +73,7 @@
 <th style="width:100px;">
 </th>
 <th>
-<div><canvas id="canvas" height="240" width="320" ></canvas></div>
+<div><canvas id="canvas" height="240" width="320"></canvas></div>
 </th>
 </tr>
 </table>
