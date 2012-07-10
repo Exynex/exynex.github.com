@@ -30,14 +30,14 @@
 
 	<section>
 
-<p style="font-size:30px;">This only works only with Chrome!</p><br />
-<p style="font-size:15px;">When you download add the PNG extension to the file...</p>
+<p style="font-size:40px;">Camera</p>
+<p style="font-size:15px;">by Kevin Gil & Kenneth Chan</p>
 <table>
 <tr>
 <th>
 <div>
 <div id="webcam">
-<!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" /><p>Sorry, only works with Chrome</p>-->
+<!--	<img src="http://exynex.github.com/camera/img/antenna.png" alt="" />-->
 	<span>EXYNEX</span>
 	<div><a onClick="toggleFilter(this);"><img src="img/icon_filter.png" style="height:20px;" alt="" /><p style="font-size:10px;">Filters</p></a>
 	</div>
@@ -54,18 +54,17 @@
 </th>
 </tr>
 <tr>
-	<th><p style="width:360px;text-align:center; ">
+	<th><!--<p style="width:360px;text-align:center; ">
 <a class="take" href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br /> 
 <a class="take" href="javascript:webcam.capture(3);changeFilter();void(0);">In 3 seconds..</a><br />
 <a id="savepngbtn" href="javascript:saveCanvas(oCanvas, 'PNG');">save as an image</a>
 
-</p><!--	-<p style="width:360px;text-align:center; ">
-	-<a href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br /> 
-	-<a href="javascript:clearRect(0,0,320,240);webcam.capture(3);changeFilter();void(0);" onclick="in3sec();">In 3 seconds..</a><br />
-	-<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, 'PNG');">save as an image</a>
-47	 
-	-</p>
--->
+</p>-->	<p style="width:360px;text-align:center; ">
+	<a class="take" href="javascript:webcam.capture();changeFilter();void(0);">Take a picture!</a><br /> 
+	<a class="take" href="javascript:clearRect(0,0,320,240);webcam.capture(3);changeFilter();void(0);" onclick="in3sec();">In 3 seconds..</a><br />
+	<a id="savepngbtn" href="javascript:saveCanvas(oCanvas, 'PNG');">save as an image</a>
+    </p>
+
    </th>
    </tr>
 </table>
@@ -379,9 +378,15 @@ document.getElementById("savepngbtn").onclick = function() {
 <script type="text/javascript">
 $("a.take").click(function () {
 if ($("div.pic:first").is(":hidden")) {
-$("div.pic").fadeIn("slow");
-} 
+$("div.pic").fadeIn("slow");}
+else{
+$("div.pic").fadeOut("fast");
+$("div.pic").fadeIn("fast");
+}
 });
+</script>
+<script type="text/javascript">
+var browserName=navigator.appName; if (browserName=="Microsoft Internet Explorer") { alert("Sorry, please look at the list of supported browsers."); }
 </script>
 </section>
 </div>
