@@ -15,9 +15,7 @@
 +----------------------------------------------------------------------*/
 
 //imports
-import ddf.minim.*;
-
-
+// none
 
 Player player; // player
 int num_enemys = 30; //number of enemies currently on

@@ -1,0 +1,417 @@
+<pre>
+<span style="color: #7E7E7E;">/*&nbsp;OpenProcessing&nbsp;Tweak&nbsp;of&nbsp;*@*http://www.openprocessing.org/sketch/62166*@*&nbsp;*/</span>
+<span style="color: #7E7E7E;">/*&nbsp;OpenProcessing&nbsp;Tweak&nbsp;of&nbsp;*@*http://www.openprocessing.org/sketch/55794*@*&nbsp;*/</span>
+<span style="color: #7E7E7E;">/*&nbsp;---------------------------------------------------&nbsp;----------------+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||//////|&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;||\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;||//////|&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;||\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;||&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;||&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||/////|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;||&nbsp;||/////|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;||&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\||&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\||&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;||//////|//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\|&nbsp;||//////|&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</span>
+<span style="color: #7E7E7E;">+----------------------------------------------------------------------*/</span>
+
+<span style="color: #7E7E7E;">//imports</span>
+<span style="color: #CC6600;">import</span> ddf.minim.*;
+
+
+
+Player&nbsp;player;&nbsp;<span style="color: #7E7E7E;">// player</span>
+<span style="color: #CC6600;">int</span> num_enemys = 30; <span style="color: #7E7E7E;">//number of enemies currently on</span>
+Enemy[]&nbsp;enemies&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Enemy[num_enemys]; <span style="color: #7E7E7E;">//array of enemies created</span>
+
+<span style="color: #CC6600;">boolean</span> gameLoop = <span style="color: #CC6600;">false</span>; <span style="color: #7E7E7E;">// main game loop</span>
+<span style="color: #CC6600;">boolean</span> gameOver = <span style="color: #CC6600;">false</span>;
+<span style="color: #CC6600;">boolean</span> mainMenu = <span style="color: #CC6600;">true</span>;
+<span style="color: #CC6600;">boolean</span> selections = <span style="color: #CC6600;">false</span>;
+
+<span style="color: #7E7E7E;">//&nbsp;collision&nbsp;detection</span>
+<span style="color: #CC6600;">boolean</span> _DEBUG_ = <span style="color: #CC6600;">false</span>;
+<span style="color: #CC6600;">boolean</span> _CIRCLE_HITTEST_ = <span style="color: #CC6600;">false</span>;
+<span style="color: #CC6600;">boolean</span> _SQUARE_HITTEST_ = <span style="color: #CC6600;">true</span>;
+<span style="color: #7E7E7E;">//buttons</span>
+<span style="color: #7E7E7E;">//&nbsp;int&nbsp;for&nbsp;easy&nbsp;input&nbsp;and&nbsp;modifing</span>
+<span style="color: #CC6600;">int</span> lolb = 520;
+<span style="color: #CC6600;">int</span> lolt = 530;
+
+<span style="color: #7E7E7E;">//Button(int&nbsp;xPos,&nbsp;int&nbsp;yPos,&nbsp;int&nbsp;xSize,&nbsp;int&nbsp;ySize,&nbsp;String&nbsp;ln,&nbsp;int&nbsp;xPos2,&nbsp;int&nbsp;yPos2)screen&nbsp;is&nbsp;980x480</span>
+Button&nbsp;replay&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(200, 250, 220, 50, <span style="color: #006699;">"Replay"</span>, 255, 290);
+Button&nbsp;main&nbsp;&nbsp;&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(200, 325, 220, 50, <span style="color: #006699;">"Main Menu"</span>, 210, 365);
+Button&nbsp;start&nbsp;&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(200, 325, 220, 50, <span style="color: #006699;">"Start Game"</span>, 210, 365);
+Button&nbsp;select&nbsp;&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(10, 422, 960, 50, <span style="color: #006699;">"Choose Kitty"</span>, 410, 460); <span style="color: #7E7E7E;">//        order of buttons</span>
+Button&nbsp;G1&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(100, 170, 170, 50, <span style="color: #006699;">"Normal"</span>, 110, 210);  <span style="color: #7E7E7E;">//                 normal | ninja</span>
+Button&nbsp;G2&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(lolb, 170, 170, 50, <span style="color: #006699;">"Ninja"</span>, lolt, 210);   <span style="color: #7E7E7E;">//             american | hipster</span>
+Button&nbsp;G3&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(100, 240, 170, 50, <span style="color: #006699;">"American"</span>, 110, 280);<span style="color: #7E7E7E;">//                mexican | evil</span>
+Button&nbsp;G4&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(lolb, 240, 170, 50, <span style="color: #006699;">"Hipster"</span>, lolt, 280); <span style="color: #7E7E7E;">//              french  | chinese</span>
+Button&nbsp;G5&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(100, 310, 170, 50, <span style="color: #006699;">"Mexican"</span>, 110, 350);  <span style="color: #7E7E7E;">//  </span>
+Button&nbsp;G6&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(lolb, 310, 170, 50, <span style="color: #006699;">"Russian"</span>, lolt, 350);  <span style="color: #7E7E7E;">//   </span>
+Button&nbsp;G7&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(100, 380, 170, 50, <span style="color: #006699;">"Chinese"</span>, 110, 420);  <span style="color: #7E7E7E;">// </span>
+Button&nbsp;G8&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Button(lolb, 380, 170, 50, <span style="color: #006699;">"French"</span>, lolt, 420); <span style="color: #7E7E7E;">//   </span>
+<span style="color: #7E7E7E;">//&nbsp;time&nbsp;variables</span>
+<span style="color: #CC6600;">int</span> count = 0;
+<span style="color: #CC6600;">int</span> countControl = 0;
+<span style="color: #CC6600;">int</span> time = 0;
+<span style="color: #CC6600;">int</span> minutes = 0;
+<span style="color: #CC6600;">String</span> score = <span style="color: #006699;">""</span>;
+<span style="color: #7E7E7E;">//variables</span>
+<span style="color: #CC6600;">color</span> clr;
+<span style="color: #CC6600;">int</span> startingSpeed = 2;
+<span style="color: #CC6600;">int</span> speed = startingSpeed;
+<span style="color: #7E7E7E;">//randomizer</span>
+<span style="color: #CC6600;">float</span> angle = <span style="color: #CC6600;">random</span>(-5, 5);
+
+<span style="color: #7E7E7E;">//font,&nbsp;images,&nbsp;and&nbsp;sounds</span>
+<span style="color: #CC6600;">PFont</span> font;
+Minim&nbsp;mini;
+AudioSample&nbsp;nyancatmusic;
+<span style="color: #7E7E7E;">//fat&nbsp;cat&nbsp;in&nbsp;the&nbsp;main&nbsp;menu</span>
+<span style="color: #CC6600;">PImage</span> nyanmenu;
+<span style="color: #7E7E7E;">//players&nbsp;only&nbsp;needed&nbsp;for&nbsp;using&nbsp;out&nbsp;of&nbsp;the&nbsp;actual&nbsp;gameplay</span>
+<span style="color: #CC6600;">PImage</span> nynormal;
+<span style="color: #CC6600;">PImage</span> nyninja;
+<span style="color: #CC6600;">PImage</span> nyamerican;
+<span style="color: #CC6600;">PImage</span> nyhipster;
+<span style="color: #CC6600;">PImage</span> nymexican;
+<span style="color: #CC6600;">PImage</span> nyrussian;
+<span style="color: #CC6600;">PImage</span> nychinese;
+<span style="color: #CC6600;">PImage</span> nyfrench;
+<span style="color: #7E7E7E;">//int&nbsp;for&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;cats&nbsp;in&nbsp;the&nbsp;chose&nbsp;menu</span>
+<span style="color: #CC6600;">int</span> catfatx = 75;
+<span style="color: #CC6600;">int</span> catfaty = 45;
+
+
+<span style="color: #7E7E7E;">//trail&nbsp;int</span>
+SpectrumTrail&nbsp;Trail;
+<span style="color: #7E7E7E;">//colors&nbsp;for&nbsp;trails</span>
+<span style="color: #CC6600;">int</span> trailColorOne = 0;
+<span style="color: #CC6600;">color</span> trailColorTwo;
+<span style="color: #CC6600;">color</span> trailColorThree;
+<span style="color: #CC6600;">color</span> trailColorFour;
+<span style="color: #CC6600;">color</span> trailColorFive;
+<span style="color: #CC6600;">color</span> trailColorSix;
+
+<span style="color: #7E7E7E;">//color&nbsp;americanColor;</span>
+<span style="color: #7E7E7E;">//color&nbsp;normalColor;</span>
+
+
+<span style="color: #7E7E7E;">//different&nbsp;cats</span>
+<span style="color: #CC6600;">boolean</span> G1Normal = <span style="color: #CC6600;">false</span>;
+
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #CC6600;">size</span>(980, 480);
+&nbsp;&nbsp;<span style="color: #CC6600;">smooth</span>();
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//trails</span>
+&nbsp;&nbsp;Trail&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> SpectrumTrail();
+&nbsp;
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//color</span>
+&nbsp;&nbsp;clr&nbsp;=&nbsp;<span style="color: #CC6600;">color</span>(0, 0, 255);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//normalColor = (0);</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//americanColor = color(255);</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// font</span>
+&nbsp;&nbsp;font&nbsp;=&nbsp;<span style="color: #CC6600;">loadFont</span>(<span style="color: #006699;">"font.vlw"</span>);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//sounds</span>
+&nbsp;&nbsp;mini&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Minim(<span style="color: #CC6600;">this</span>);  
+&nbsp;&nbsp;nyancatmusic&nbsp;=&nbsp;mini.loadSample(<span style="color: #006699;">"nyancat.mp3"</span>, 2048);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// create enemys</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i < num_enemys; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;enemies[i]&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Enemy();
+&nbsp;&nbsp;&nbsp;&nbsp;nyanmenu&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"nyancat.gif"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">//load all the out of gameplay nayn cats</span>
+&nbsp;&nbsp;&nbsp;&nbsp;nynormal&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"Nyan-cat.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nyninja&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"tinynyaninja.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nyamerican&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"americakittynot.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nyhipster&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"hipster.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nymexican&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"mexican.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nyrussian&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"russian.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nychinese&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"chinese.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;nyfrench&nbsp;=&nbsp;<span style="color: #CC6600;">loadImage</span>(<span style="color: #006699;">"french.gif"</span>);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// create player</span>
+&nbsp;&nbsp;player&nbsp;=&nbsp;<span style="color: #CC6600;">new</span> Player(<span style="color: #006699;">mouseX</span>-25, <span style="color: #006699;">mouseY</span>-16, 50, 32);
+&nbsp;
+&nbsp;&nbsp;
+}
+
+
+
+<span style="color: #7E7E7E;">//drawing&nbsp;loop&nbsp;begins&nbsp;here</span>
+<span style="color: #CC6600;">public</span> <span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//draws trail</span>
+&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
+&nbsp;&nbsp;<span style="color: #CC6600;">textFont</span>(font, 30);
+&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(100);
+&nbsp;&nbsp;<span style="color: #CC6600;">strokeWeight</span>(4);
+
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//////////////</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// Main menu//</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//////////////</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( mainMenu ) {
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">background</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(0, 0, 255, 170);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">rect</span>(200, 20, 600, 110); <span style="color: #7E7E7E;">//(xPos, yPos, xFat, yFat)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"Welcome to the Nyan Game! \n don't let your kitty get hit!"</span>, 295, 70);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">image</span>(nyanmenu, 300, 140); <span style="color: #7E7E7E;">// (xPos, yPos)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;select.<span style="color: #CC6600;"><b>draw</b></span>();
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( select.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mainMenu&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;<span style="color: #7E7E7E;">////////////////////</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// Game Selections//</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">////////////////////</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( selections ) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">background</span>(200);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(0, 0, 255, 170);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">rect</span>(290, 10, 430, 100);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"Choose your nyan! :D"</span>, 360, 70); <span style="color: #7E7E7E;">//for img: image("name"xPos, yPos, xFat, yFat)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">//these are the buttons!:    these are the pictures of the buttons:</span>
+&nbsp;&nbsp;&nbsp;&nbsp;G1.<span style="color: #CC6600;"><b>draw</b></span>(); G2.<span style="color: #CC6600;"><b>draw</b></span>();        <span style="color: #CC6600;">image</span>(nynormal, 360, 170, catfatx, catfaty);          <span style="color: #CC6600;">image</span>(nyninja, 800, 170, catfatx, catfaty);
+&nbsp;&nbsp;&nbsp;&nbsp;G3.<span style="color: #CC6600;"><b>draw</b></span>(); G4.<span style="color: #CC6600;"><b>draw</b></span>();        <span style="color: #CC6600;">image</span>(nyamerican, 360, 240, catfatx, catfaty);        <span style="color: #CC6600;">image</span>(nyhipster, 800, 240, catfatx, catfaty);
+&nbsp;&nbsp;&nbsp;&nbsp;G5.<span style="color: #CC6600;"><b>draw</b></span>(); G6.<span style="color: #CC6600;"><b>draw</b></span>();        <span style="color: #CC6600;">image</span>(nymexican, 360, 315, catfatx, catfaty);         <span style="color: #CC6600;">image</span>(nyrussian, 800, 315, catfatx+5, catfaty+5);
+&nbsp;&nbsp;&nbsp;&nbsp;G7.<span style="color: #CC6600;"><b>draw</b></span>(); G8.<span style="color: #CC6600;"><b>draw</b></span>();        <span style="color: #CC6600;">image</span>(nychinese, 360, 400, catfatx, catfaty);         <span style="color: #CC6600;">image</span>(nyfrench, 800, 400, catfatx, catfaty);
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// nyan mode</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( G1.clicked ) {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G1.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// set sprite images</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"Nyan-cat.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"nyanstar.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// ninja mode</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( G2.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G2.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// set sprite images</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"tinynyaninja.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"tinytinystar.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// american mode</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( G3.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G3.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// set sprite image</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"americakittynotsm.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"hamsickle.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// hipster mode</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( G4.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G4.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// set sprite images</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"hipstery.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"sunglassest.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">//mexican</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( G5.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G5.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// set sprite images</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"mexican.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"burrito.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">//russian</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (G6.clicked) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G6.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"russian.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"bomb.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span>(G7.clicked){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G7.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"chinese.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"bomb.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span>(G8.clicked){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G8.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.setSpriteImage(<span style="color: #006699;">"french.gif"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setEnemySpriteImage(<span style="color: #006699;">"bomb.png"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//////////////</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// Game Loop//</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//////////////</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (gameLoop) {
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">background</span>(17, 67, 116);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// update score and draw</span>
+&nbsp;&nbsp;&nbsp;&nbsp;updateScore();
+&nbsp;&nbsp;&nbsp;&nbsp;drawScore();
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// update enemy positions and draw    </span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i < num_enemys; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemies[i].update();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemies[i].<span style="color: #CC6600;"><b>draw</b></span>();
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// update player position and draw</span>
+&nbsp;&nbsp;&nbsp;&nbsp;player.pos.x&nbsp;=&nbsp;<span style="color: #006699;">mouseX</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;player.pos.y&nbsp;=&nbsp;<span style="color: #006699;">mouseY</span>;    
+&nbsp;&nbsp;&nbsp;&nbsp;player.<span style="color: #CC6600;"><b>draw</b></span>();
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">// do collision detect for player+enemies   </span>
+&nbsp;&nbsp;&nbsp;&nbsp;collisionDetect();
+&nbsp;&nbsp;}
+
+
+&nbsp;&nbsp;<span style="color: #7E7E7E;">/////////////////</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">////GAME OVER////</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">/////////////////</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( gameOver ) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( gameLoop ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.stop();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">background</span>(230);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255, 0, 0, 170);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">rect</span>(150, 70, 330, 80);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">rect</span>(230, 150, 160, 70);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"Game Over!"</span>, 200, 125);
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (time < 10) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(minutes + <span style="color: #006699;">":0"</span> + time, 265, 205);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">else</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(minutes + <span style="color: #006699;">":"</span> + time, 265, 205);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;replay.<span style="color: #CC6600;"><b>draw</b></span>();
+&nbsp;&nbsp;&nbsp;&nbsp;main.<span style="color: #CC6600;"><b>draw</b></span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( replay.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;replay.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;speed&nbsp;=&nbsp;startingSpeed;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clr&nbsp;=&nbsp;<span style="color: #CC6600;">color</span>(0, 0, 255);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameOver&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mainMenu&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nyancatmusic.trigger();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( main.clicked ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.clicked&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameLoop&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameOver&nbsp;=&nbsp;<span style="color: #CC6600;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;=&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (G1Normal){ trailColorOne = <span style="color: #CC6600;">color</span>(255); } 
+}
+<span style="color: #7E7E7E;">//update&nbsp;the&nbsp;projectile's&nbsp;speed</span>
+<span style="color: #CC6600;">void</span> updateSpeed() {
+&nbsp;&nbsp;speed&nbsp;+=&nbsp;1;
+&nbsp;&nbsp;angle&nbsp;=&nbsp;<span style="color: #CC6600;">random</span>(-10, 10);
+&nbsp;&nbsp;clr&nbsp;=&nbsp;<span style="color: #CC6600;">color</span>(<span style="color: #CC6600;">random</span>(0, 255), 100, 100);
+}
+<span style="color: #7E7E7E;">//collision&nbsp;detection</span>
+<span style="color: #CC6600;">void</span> collisionDetect() {
+&nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i < num_enemys; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( player.hitTest( (Sprite) enemies[i]) ) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameOver&nbsp;=&nbsp;<span style="color: #CC6600;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}
+&nbsp;<span style="color: #7E7E7E;">//set enemy sprite image</span>
+<span style="color: #CC6600;">void</span> setEnemySpriteImage(<span style="color: #CC6600;">String</span> spriteImageLoc) {
+&nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i < num_enemys; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;enemies[i].setSpriteImage(spriteImageLoc);
+&nbsp;&nbsp;}
+}
+<span style="color: #7E7E7E;">//update&nbsp;score</span>
+<span style="color: #CC6600;">void</span> updateScore() {
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (countControl != <span style="color: #CC6600;">second</span>() ) {
+&nbsp;&nbsp;&nbsp;&nbsp;countControl&nbsp;=&nbsp;<span style="color: #CC6600;">second</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;count++;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;time&nbsp;=&nbsp;count;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (time % 13 == 0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateSpeed();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (time == 60) {
+&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;+=&nbsp;1;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;time&nbsp;=&nbsp;0;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;0;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;score&nbsp;=&nbsp;minutes&nbsp;+&nbsp;<span style="color: #006699;">":"</span> + time;
+}
+<span style="color: #7E7E7E;">//draw&nbsp;score</span>
+<span style="color: #CC6600;">void</span> drawScore() {
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (time < 10) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(minutes + <span style="color: #006699;">":0"</span> + time, 30, 60);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #CC6600;">else</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(minutes + <span style="color: #006699;">":"</span> + time, 30, 60);
+&nbsp;&nbsp;}
+}
+<span style="color: #7E7E7E;">//mouse&nbsp;click&nbsp;checker</span>
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;">mouseClicked</span>() {
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (_DEBUG_) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">println</span>(<span style="color: #006699;">"MouseX: "</span> + <span style="color: #006699;">mouseX</span> + <span style="color: #006699;">" -- "</span> + <span style="color: #006699;">"MouseY: "</span> + <span style="color: #006699;">mouseY</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">println</span>(<span style="color: #006699;">mousePressed</span>);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( mainMenu ) {
+&nbsp;&nbsp;&nbsp;&nbsp;select.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( selections ) {
+&nbsp;&nbsp;&nbsp;&nbsp;G1.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G2.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G3.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G4.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G5.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G6.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G7.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;G8.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> ( gameOver ) {
+&nbsp;&nbsp;&nbsp;&nbsp;replay.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;main.<span style="color: #CC6600;">mouseClicked</span>();
+&nbsp;&nbsp;}
+&nbsp;&nbsp;
+}
+
+
+</pre>
