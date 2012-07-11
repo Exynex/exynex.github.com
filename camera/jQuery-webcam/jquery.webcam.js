@@ -82,7 +82,7 @@
 
 		webcam.onLoad();
 	    } else if (0 == run) {
-		webcam.debug("error", "Flash movie not yet registered!");
+		webcam.debug("", "Ups, something went wrong. Please update Flash or try another browser..");
 	    } else {
 		/* Flash interface not ready yet */
 		window.setTimeout(_register, 1000 * (4 - run), run - 1);
