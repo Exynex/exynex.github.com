@@ -9,22 +9,20 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-git.js"></script>
 <script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css"/>
-<script type="text/javascript"> 
+<script type="text/javascript">
+//<![CDATA[ 
 $(function(){
-// create our popcorn instance
 var pop = Popcorn( "#video" );
 
 pop.webpage({
         id: "webpages-a",
         start: 0,
         end: 10,
-        src: "m.facebook.com",
+        src: "http://webmademovies.org/",
         target: "webpagediv"
       });
-
-// play video
 pop.play();
-});
+});//]]>
 </script>
 <style type="text/css">
 div#webpagediv{
