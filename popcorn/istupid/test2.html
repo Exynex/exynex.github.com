@@ -10,7 +10,6 @@
 <script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <script type="text/javascript">
-//<![CDATA[ 
 $(function(){
 var pop = Popcorn( "#video" );
 
@@ -18,19 +17,16 @@ pop.webpage({
         id: "webpages-a",
         start: 0,
         end: 10,
-        src: "http://m.engadget.com/",
+        src: "http://android.com",
         target: "webpagedisv"
       });
 pop.play();
-});//]]>
+});
 </script>
 <style type="text/css">
 body {
-    background-image:url('http://farm6.static.flickr.com/5074/5905795977_d2d2bec6a3_o.jpg');
-    background-repeat:repeat-x;
-    background-repeat:repeat-y;
-    background-attachment:fixed;
-    background-position:center; 
+    background-image:url('apple-bg.png');
+    background-repeat:repeat;
 } 
 div#webpagediv{
 	height:100%;
@@ -38,23 +34,17 @@ div#webpagediv{
 div#video{
 	width:;
 }
-table#maint{
-	width:950px;
-    position: fixed;
-}
-th.sect{
-	width:50%;
-  height:390px;
-}
 div#main{
-    width:950px;
-	padding-left:100px;
+    width:1050px;
 }
 iframe#webpages-a{
 	/*width:100%;*/
-	height:390px;
+	height:385px;
   
 }
+div.inline { 
+      float:left; 
+   }
 </style>
 </head>
 <body>
@@ -65,22 +55,18 @@ iframe#webpages-a{
     <li><a href="index.html">main</a></li>
   </ul>
 </div>
-  <div align="center">
-	<div id="main" align="center">
+<div align="center">
+<div id="main">
+<div align="center"
 		<font style="font-color:black; font-size:40px; font-family:Arial;">not as advanced as people think</font><br><br>
-<table id="maint" border="2px">
-	<tr>
-		<th class="sect">
+</div>
+<div class="inline">
          <video height="390" id="video" controls>
              <source src="istupid.ogv"/>
          </video>
-        </th>
-        <th>
-           <div id="webpagediv"></div>
-        </th>
-    </tr>
-</table>
-    </div>
-  </div>
+</div>
+         <div id="webpagediv" class="inline"></div>
+</div>
+</div>
 </body>
 </html>
