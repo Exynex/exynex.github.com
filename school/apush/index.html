@@ -23,13 +23,18 @@
 </head>  
 <!--Body-->
 <body style="margin: 0px;">
+<div class="main">
    <div align="center">
       <div style="width:700px;" align="left">
    <h1><p>Kevin's APush summer homework stuff</p></h1>
+<div class="inline"
    <ul style="list-style-type: none;">
-      <li><a target="_blank" href="ins">Homework Instructions</a></li>
-      <li><a target="_blank" href="hw">Done Homework</a></li>
+      <li><p>For me:</p></li>
+      <li><a target="_blank" href="ins">Homework <br>Instructions</a></li>
+      <li><p>For the teahcer</p></li>
+      <li><a href="#" class="ko">Finished<br>Homework</a></li>
    </ul>
+</div>
 <div class="inline">
    <ul style="list-style-type: none;">
       <li><p>Book chapters:</p></li>
@@ -56,4 +61,65 @@
    </ul>
  </div>
 </div>
+</div>
+</div>
+<!--done homework-->
+  <div class="dhw" align="center" style="display:none;">
+      <div style="width:700px;" align="left">
+         <h1><p>AP US History Homework - Kevin Gil</p></h1>
+         <h2><p>1. Outline chapters 1-4 using Cornell notes.</p></h1>
+         <p style="font-size:20px;">Chapter 1: 6/15 <button>not available yet</button></p>
+         <p style="font-size:20px;">Chapter 2: 6/29 <button>not available yet</button></p>
+         <p style="font-size:20px;">Chapter 3: 7/13 <button>not available yet</button></p>
+         <p style="font-size:20px;">Chapter 4: 7/27 <button>not available yet</button></p>
+         <h2><p>2. Complete study guides for chapters 1-4</p></h1>
+         <p style="font-size:20px;">Chapter 1: 6/22 <button>not available yet</button></p>
+         <p style="font-size:20px;">Chapter 2: 7/6 <button>not available yet</button></p>
+         <p style="font-size:20px;">Chapter 3: 7/20 <button>not available yet</button></p>
+         <p style="font-size:20px;">Chapter 4: 8/30 <button>not available yet</button></p>
+         <h2><p>3. Video on your family’s immigration/migration to SF.</p></h1>
+      </div>   
+</div>
+   <script type="text/javascript">
+$("a.ko").click(function () {
+if ($("div.dhw:first").is(":hidden")) {
+$("div.logins").fadeIn("slow");
+$("div.main").fadeOut("slow");
+} else {
+
+}
+});
+</script>
+
+<div align="center">
+<div class="logins" aligin="center" style="display:none;">
+   <div style="width:300px;" align="left">
+   <form name="login">
+<p>Username</p><input type="text" name="userid"/>
+<p>Password</p><input type="password" name="pswrd"/>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+</div>
+</div>
+</div>
+
+
+   <script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+/*the following code checkes whether the entered userid and password are matching*/
+if(form.userid.value == "mrko" && form.pswrd.value == "imnotastudent")
+{
+/*opens the target page while Id & password matches*/
+$("div.logins").fadeOut("slow");
+$("div.main").fadeOut("slow");
+$("div.dhw").fadeIn("slow");
+}
+else
+{
+alert("Error Password or Username")/*displays error message*/
+}
+}
+</script>
 </body>
