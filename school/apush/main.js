@@ -1,7 +1,7 @@
 $("a.ko").click(function () {
 if ($("div.dhw:first").is(":hidden")) {
 $("div.logins").fadeIn("slow");
-$("div.main").fadeOut("slow");
+$("div.main").hide("");
 } else {
 
 }
@@ -15,8 +15,8 @@ function check(form)/*function to check userid & password*/
 if(form.userid.value == "mrko" && form.pswrd.value == "awesomekevin")
 {
 /*opens the target page while Id & password matches*/
-$("div.logins").fadeOut("slow");
-$("div.main").fadeOut("slow");
+$("div.logins").hide("slow");
+$("div.main").hide("slow");
 $("div.dhw").fadeIn("slow");
 }
 else
