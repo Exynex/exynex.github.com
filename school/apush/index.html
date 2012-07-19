@@ -9,7 +9,6 @@
    <link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico" />
    <link rel="icon" type="image/png" href="../../icon.png" />
    <link rel="icon" type="image/ico" href="../../favicon.ico"/>
-   
    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
    <link rel="stylesheet" type="text/css" href="../../rec/style.css" />
    <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -77,49 +76,22 @@
          <p style="font-size:20px;">Chapter 2: 7/6 <button>not available yet</button></p>
          <p style="font-size:20px;">Chapter 3: 7/20 <button>not available yet</button></p>
          <p style="font-size:20px;">Chapter 4: 8/30 <button>not available yet</button></p>
-         <h2><p>3. Video on your family’s immigration/migration to SF.</p></h1>
+         <h2><p>3. Video on my family’s immigration/migration to SF.</p></h1>
       </div>   
 </div>
-   <script type="text/javascript">
-$("a.ko").click(function () {
-if ($("div.dhw:first").is(":hidden")) {
-$("div.logins").fadeIn("slow");
-$("div.main").fadeOut("slow");
-} else {
-
-}
-});
-</script>
-
 <div align="center">
 <div class="logins" aligin="center" style="display:none;">
-   <div style="width:300px;" align="left">
+   <div style="width:150px;" align="left"><br><br><br>
+<img src="../../icon.png" width="150px"/>
    <form name="login">
 <p>Username</p><input type="text" name="userid"/>
 <p>Password</p><input type="password" name="pswrd"/>
+<br><br><br>
 <input type="button" onclick="check(this.form)" value="Login"/>
-<input type="reset" value="Cancel"/>
+<input type="reset" value="Reset"/>
 </form>
 </div>
 </div>
 </div>
-
-
-   <script language="javascript">
-function check(form)/*function to check userid & password*/
-{
-/*the following code checkes whether the entered userid and password are matching*/
-if(form.userid.value == "mrko" && form.pswrd.value == "imnotastudent")
-{
-/*opens the target page while Id & password matches*/
-$("div.logins").fadeOut("slow");
-$("div.main").fadeOut("slow");
-$("div.dhw").fadeIn("slow");
-}
-else
-{
-alert("Error Password or Username")/*displays error message*/
-}
-}
-</script>
+<script language="javascript" src="main.js"></script>
 </body>
