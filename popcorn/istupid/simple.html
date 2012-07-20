@@ -1,0 +1,67 @@
+<html><head><base href="http://maker.mozillapopcorn.org/templates/supported/simple/"><style type="text/css">@media print {  .gmnoprint {    display:none  }}@media screen {  .gmnoscreen {    display:none  }}</style><script src="http://s.ytimg.com/yt/jsbin/www-widgetapi-vflKBwTUg.js" async=""></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Simple</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  
+  
+  
+<link rel="stylesheet" href="../../../css/butter.ui.css"><script src="../../../external/popcorn-js/popcorn.js" type="text/javascript"></script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/9/10a/%7Bcommon,util,geocoder%7D.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/9/10a/%7Bmap%7D.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/9/10a/%7Bonion%7D.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/9/10a/%7Bstats%7D.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/9/10a/%7Bcontrols%7D.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/9/10a/%7Bmarker%7D.js"></script>
+</head>
+<body class="butter-header-spacing butter-tray-spacing minimized">
+  <div class="container">
+    <div class="video-background">
+      <div id="video" data-butter-media-controls="true"></div>
+    </div>
+    <div id="above-right" class="well"></div>
+  </div>
+
+
+<script type="text/javascript">(function(){
+var popcorn = Popcorn.smart( '#video', ["http://videos-cdn.mozilla.net/serv/webmademovies/studentresponse.mp4?butteruid=1342741910367","http://videos-cdn.mozilla.net/serv/webmademovies/studentresponse.ogv?butteruid=1342741910368","http://videos-cdn.mozilla.net/serv/webmademovies/studentresponse.webm?butteruid=1342741910369"], {"frameAnimation":false} );
+popcorn.image({
+    "start": 25.75,
+    "end": 35.5,
+    "target": "above-right",
+    "href": "http://en.wikipedia.org/wiki/File:Snapshot_of_earthquake-like_crash_testing.jpg",
+    "src": "http://upload.wikimedia.org/wikipedia/commons/e/e7/Snapshot_of_earthquake-like_crash_testing.jpg",
+    "text": ""
+});
+popcorn.image({
+    "start": 15,
+    "end": 25,
+    "target": "above-right",
+    "href": "http://en.wikipedia.org/wiki/File:Post-and-Grant-Avenue.-Look.jpg",
+    "src": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Post-and-Grant-Avenue.-Look.jpg/800px-Post-and-Grant-Avenue.-Look.jpg",
+    "text": ""
+});
+popcorn.text({
+    "start": 15,
+    "end": 25,
+    "target": "above-right",
+    "text": "<h1><a href=\"http://en.wikipedia.org/wiki/1906_San_Francisco_earthquake\">Click here to learn about the great earthquake of 1906</a>.</h1>",
+    "escape": false,
+    "multiline": false
+});
+popcorn.text({
+    "start": 25.75,
+    "end": 35.5,
+    "target": "above-right",
+    "text": "<h1><a href=\"http://en.wikipedia.org/wiki/Earthquake_engineering\">Click here to learn about earthquake engineering.</a></h1>",
+    "escape": false,
+    "multiline": false
+});
+popcorn.controls( true );
+
+return popcorn;
+}());
+</script>
+</body>
+</html>
