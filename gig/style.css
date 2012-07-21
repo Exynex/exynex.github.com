@@ -1,0 +1,96 @@
+// general
+#body{
+width:800px;
+font-family;Arial;
+color:gray;}
+
+p {
+color:gray;
+font-family:Arial;
+
+}
+
+p.text{
+color:gray;
+font-family:Arial;
+
+}
+
+
+a:link { 
+color:magenta;
+background-color: white; 
+text-decoration:none;}
+
+a:visited {
+color:magenta;
+text-decoration:none;
+}
+
+a:hover {
+background-color: magenta;
+ color:white;}
+
+
+//for header
+
+
+#nav{padding-top:0x;
+positon:fixed;
+color:gray;
+}
+#nav ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align:;
+
+}
+
+#nav ul li { display: inline; }
+
+#nav ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: gray;
+background-color: ;
+font-family:Arial;
+}
+
+#nav ul li a:hover
+{
+color: white;
+background-color: magenta;
+font-family:Arial;
+}
+.me{
+
+width:100%;
+border:none;
+}
+
+about{
+
+width:100%;
+border:none;
+}
+
+
+
+// for contact me section
+
+
+#myinfo { 
+width:800px;
+color:gray;
+font-family:Arial;
+text-align:left;
+color:gray;
+}
+#myinfo ul li { display: inline; }
+#myinfo ul li img {border-color;white;}
+
+.bordered{border-color:white;}
+a img.bordered:hover {border-color:magenta;}
