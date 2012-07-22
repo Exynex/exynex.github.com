@@ -5,31 +5,31 @@ font-family;Arial;
 color:gray;}
 
 p {
-color:gray;
+color:white;
 font-family:Arial;
 
 }
 
 p.text{
-color:gray;
+color:white;
 font-family:Arial;
 
 }
 
 
 a:link { 
-color:magenta;
-background-color: white; 
+color:#00FFFF;
+background-color:; 
 text-decoration:none;}
 
 a:visited {
-color:magenta;
+color:#00FFFF;
 text-decoration:none;
 }
 
 a:hover {
-background-color: magenta;
- color:white;}
+background-color: white;
+ color:#00FFFF;}
 
 
 //for header
