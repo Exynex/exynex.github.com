@@ -1,18 +1,18 @@
 // general
 #body{
 width:800px;
-font-family;Arial;
+font-family;'Comic Sans MS';
 color:gray;}
 
 p {
 color:gray;
-font-family:Arial;
+font-family:'Comic Sans MS';
 
 }
 
 p.text{
 color:gray;
-font-family:Arial;
+font-family:'Comic Sans MS';
 
 }
 
@@ -56,14 +56,14 @@ text-decoration: none;
 padding: .2em 1em;
 color: gray;
 background-color: ;
-font-family:Arial;
+font-family:'Comic Sans MS';
 }
 
 #nav ul li a:hover
 {
 color: white;
 background-color: magenta;
-font-family:Arial;
+font-family:'Comic Sans MS';
 }
 .me{
 
@@ -85,7 +85,7 @@ border:none;
 #myinfo { 
 width:800px;
 color:gray;
-font-family:Arial;
+font-family:'Comic Sans MS';
 text-align:left;
 color:gray;
 }
