@@ -1,23 +1,24 @@
-<!--
-http://www.java2s.com/Tutorial/JavaScript/0560__GUI-Components/AutocompleteTextboxExample.htm
--->
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Upload files to archive.org</title>
-
+<title>Upload your files to archive.org</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.21/themes/base/jquery-ui.css" type="text/css" media="all" />
 <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://jqueryui.com/demos/autocomplete/css/base.css" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="http://exynex.github.com/gigabit/style.css" />
 <link rel="icon" type="image/png" href="http://blog.archive.org/wp-content/uploads/2011/05/ialogo.png" />
+<script src="http://jqueryui.com/demos/autocomplete/themeroller/themeswitchertool/" type="text/javascript"></script>
+</head>
 <script>
         $(function() {
                 var availableTags = [
                         "RESTORE OUR FUTURE, INC.",
-                        "WINNING OUR FUTURE", "PRIORITIES USA ACTION","AMERICAN CROSSROADS","CLUB FOR GROWTH ACTION","RED WHITE AND BLUE FUND","MAJORITY PAC","MAKE US GREAT AGAIN, INC","TEXAS CONSERVATIVES FUND","ENDORSE LIBERTY, INC","HOUSE MAJORITY PAC","OUR DESTINY PAC","FREEDOMWORKS FOR AMERICA","CAMPAIGN FOR PRIMARY ACCOUNTABILITY INC","WOMEN VOTE!", ];
+                        "WINNING OUR FUTURE", "PRIORITIES USA ACTION","AMERICAN CROSSROADS","CLUB FOR GROWTH ACTION","RED WHITE AND BLUE FUND","MAJORITY PAC","MAKE US GREAT AGAIN, INC","TEXAS CONSERVATIVES FUND","ENDORSE LIBERTY, INC","HOUSE MAJORITY PAC","OUR DESTINY PAC","FREEDOMWORKS FOR AMERICA","CAMPAIGN FOR PRIMARY ACCOUNTABILITY INC","WOMEN VOTE!","CONSERVATIVE RENEWAL POLITICAL ACTION COMMITTEE (PAC)","LIBERTY FOR ALL SUPER PAC","CITIZENS FOR A WORKING AMERICA PAC","NATIONAL ASSOCIATION OF REALTORS CONGRESSIONAL FUND","RESTORE AMERICA'S VOICE PAC","YG ACTION FUND","SERVICE EMPLOYEES INTERNATIONAL UNION PEA-FEDERAL","LCV VICTORY FUND","COMMITTEE TO ELECT AN EFFECTIVE VALLEY CONGRESSMAN","AMERICAN FOUNDATIONS COMMITTEE INC; THE","INDIANA VALUES SUPERPAC INC","SANTA RITA SUPERPAC","9-9-9 FUND","DEFENDERS OF WILDLIFE ACTION COMMITTEE","SPIRIT OF DEMOCRACY AMERICA","AMERICAN JOBS PAC","ENDING SPENDING ACTION FUND","FLORIDA FREEDOM PAC","HOOSIERS FOR JOBS","STRONG AMERICA NOW SUPER PAC","PROGRESS FOR WASHINGTON","PROGRESSIVE KICK INDEPENDENT EXPENDITURES","REVOLUTION PAC","RESTORING PROSPERITY FUND","RESTORING OUR COMMUNITY","FREEDOM FUND FOR AMERICA'S FUTURE INC","CONSERVATIVES ACTING TOGETHER POLITICAL ACTION COMMITTEE (CATPAC)","RETHINK PAC","NATIONAL RIGHT TO LIFE VICTORY FUND","ICPURPLE, INC.","LEADERS FOR FAMILIES SUPER PAC INC","USA SUPER PAC","AMERICAN DENTAL ASSOCIATION INDEPENDENT EXPENDITURES COMMITTEE","LUNCH PAIL REPUBLICANS INDEPENDENT EXPENDITURE ONLY COMMITTEE","REAL STREET CONSERVATIVES PAC","COMMUNICATIONS WORKERS OF AMERICA WORKING VOICES", "AMERICA'S NEXT GENERATION LLC D/B/A THE NEXT GENERATION","COOPERATIVE OF AMERICAN PHYSICIANS IE COMMITTEE","VOICES OF THE AMERICAN FEDERATION OF GOVERNMENT EMPLOYEES","CAMPAIGN FOR OUR FUTURE","AMERICANS FOR GROWTH, OPPORTUNITY AND PROSPERITY, INC.","1911 UNITED","AMERICANS FOR A BETTER TOMORROW, TOMORROW, INC.","INLAND EMPIRE TAXPAYERS FOR JOBS","CITIZENS FOR PROSPERITY AND GOOD GOVERNMENT",
+"DGA ACTION","OHIOANS FOR OPPORTUNITY","FRIENDS UNITED POLITICAL ACTION COMMITTEE","WORKING FOR US POLITICAL ACTION COMMITTEE INC","FREEDOM PAC","AMERICAN SUNRISE","JOBS OPPORTUNITY AND FREEDOM POLITICAL ACTION COMMITTEE - JOFPAC","NEW PROSPERITY FOUNDATION; THE","CROSSROADS GENERATION","STRENGTH & LIBERTY PAC","VETERANS FOR A STRONG AMERICA ACTION GROUP","CONGRESSIONAL ELECTIONS PAC","AMERICANS FOR ACCOUNTABILITY IN LEADERSHIP","WORKING FAMILIES FOR HAWAII","AMERICAN JOBS AND GROWTH ALLIANCE","CONSERVATIVES FOR FREEDOM PAC","INDEPENDENT SOURCE PAC","NATIONAL HORIZON","CITIZENS 4 ETHICS IN GOVERNMENT","SUBURBAN VOTERS FOR CHOICE","CITIZENS FOR CONSERVATIVE LEADERSHIP, INC.","KEEP CONSERVATIVES UNITED","LANTERN PROJECT, THE","PRESIDENTDOWNGRADE.COM","TRUST IN SMALL BUSINESS POLITICAL ACTION COMMITTEE (TISB PAC)","SAM VS THE MACHINE","SECURE ARIZONA PAC","WORKING FAMILIES FOR LIZ CROWLEY","SAVING FLORIDA'S FUTURE","SIERRA CLUB INDEPENDENT ACTION","AMERICAN WORKER INC, THE","RAISING RED ACTION FUND","FREEDOM PLAINS ACTION NETWORK","CENTENNIAL FUND COMMITTEE; THE","CATHOLICVOTE.ORG CANDIDATE FUND","LIBERTARIAN ACTION SUPER PAC","JEWISH COUNCIL FOR EDUCATION AND RESEARCH","WORKERS' VOICE","CREDO SUPERPAC","TIPPING POINT","TEXAS TEA PARTY PATRIOTS PAC","AMERICA VOTES ACTION FUND","AMERICA'S FAMILIES FIRST ACTION FUND","AMERICAN BRIDGE 21ST CENTURY","AMERICAN VALUES COALITION","AMERICANS FOR A BETTER WAY FORWARD","AMERICANS FOR NEW LEADERSHIP","CAIN CONNECTIONS PAC","CALIFORNIA ASSOCIATION OF PHYSICIAN GROUPS (CAPG) PHYSICIANS INDEPENDENT \nEXPENDITURE COMMI","CALIFORNIANS FOR INTEGRITY IN GOVERNMENT","CAMPAIGN FOR AMERICAN VALUES PAC","CHRISTINEPAC","CITIZENS FOR GOOD GOVERNMENT","CITIZENS FOR STRENGTH AND SECURITY PAC","COALITION FOR AMERICAN VALUES PAC","COASTAL FLORIDA'S FUTURE PAC","CONGRESSIONAL LEADERSHIP FUND","ECONOMIC INNOVATION ACTION FUND","EMERGENCY COMMITTEE FOR ISRAEL PAC","FAITH FAMILY FREEDOM FUND","FREEDOM AND LIBERTY PAC","FREEDOM BORN FUND","GRASSROOTS"
+
+                ];
                 $( "#tags" ).autocomplete({
                         source: availableTags
                 });
@@ -84,8 +85,14 @@ label{
         font-family: Arial;
         resize: none;
   }
+  #tags{
+      font-size:default;
+      }
+      .ui-menu-item{
+          font-size:10px;
+          }
+        
 </style>
-
 <script type="text/javascript">
     var date = new Date();
     var year = date.getUTCFullYear();
@@ -121,12 +128,10 @@ label{
     }
 </script>
 </head>
-<!--================================================================================================-->
-
 <body onload="load()">
 <div align="center">
 <div id="overmain">
-<div id="main">
+<div id="main"><br>
       <div class="inline"><img id="logo" src="http://blog.archive.org/wp-content/uploads/2011/05/ialogo.png" name="logo" /></div>
 
       <div class="inline">
@@ -230,7 +235,9 @@ label{
           </tr>
           <tr>
             <td><label for="funded-by">Funded by:</label></td>
-            <td><input id="tags"/></td>
+            <td>
+        <input id="tags" />
+        </td>
           </tr>
           <tr>
             <td><label>Date Aired:</label></td>
@@ -249,7 +256,7 @@ ption><option value="1953">1953</option><option value="1952">1952</option><optio
           <tr>
             <td><label for="state">State:</label></td>
             <td><select name="state" onfocus="document.forms[0].elements[10][0].disabled='disabled'">
-            <option default="">--Select--</option>
+            <option default="">---Select---</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -316,16 +323,16 @@ ption><option value="1953">1953</option><option value="1952">1952</option><optio
                  <img src="http://www.startbrite.com/images/submit-gray.gif" onclick="validate()" />
          </div>
  
-        </form>
-        Copyright &copy; 2012 by cub01d and exynex.
-    </div>
+        </form><br>
+ </div>
     <!--================================================================================================-->
   </div>
   </div>
 
-    <script src="http://www.paperplanesdesign.com/cubed/Get-Zip-From-Location/js/jquery-1.5.min.js"></script>
     <script src="http://www.paperplanesdesign.com/cubed/Get-Zip-From-Location/js/Utils.js"></script>
     <script src="http://www.paperplanesdesign.com/cubed/Get-Zip-From-Location/js/LocationController.js"></script>
+
+    
 </div>
 </body>
 </html>
