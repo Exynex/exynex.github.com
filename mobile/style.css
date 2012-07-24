@@ -49,8 +49,8 @@ border-bottom:2px solid aqua;
 #actionbarmenunav{
 	position: fixed;
 	width:100%;
-	border-bottom:2px solid gray;
-	height:85px;
+	border-bottom:;
+	height:75px;
 }
 #menunav{
 padding-top:50px;
@@ -58,7 +58,7 @@ width:100%;
 -moz-box-shadow: 0 0 30px 5px #999;
 -webkit-box-shadow: 2px 2px 4px 1px #000;
 box-shadow: 2px 2px 4px 1px #000;
-height:35px;
+height:25px;
 }
 div.inline{
 	float: left;
@@ -67,19 +67,19 @@ div.inline{
 #bhome{
 	width:33%;
 	background-color: #FFFFFF;
-	height:35px;
+	height:25px;
 	border-right:2px solid gray;
 }
 #bprojects{
 	width:33%;
 	background-color: #FFFFFF;
-	height:35px;
+	height:25px;
 	border-right:2px solid gray;
 }
 #babout{
 	width:33%;
 	background-color: #FFFFFF;
-	height:35px;
+	height:25px;
 
 }
 #content{
