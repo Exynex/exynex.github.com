@@ -5,6 +5,7 @@ background-image:url('../rec/img/android_bg_holo.png');
 font-family: 'Comic Sans MS', 'Arial';
 color:gray;}
 p{
+color:white;
 font-family: 'Comic Sans MS', 'Arial';
 margin:0;
 }
@@ -71,6 +72,11 @@ div.inline{
 	position: fixed;
 	padding-top: 0px;
 }
+#emptyspace2{
+	width:100%;
+	background-color: #333333;
+	padding-top: 80px;
+}
 #bhome{
 	width:24%;
 	background-color: #333333;
@@ -93,7 +99,16 @@ div.inline{
 	width:24%;
 	background-color: #333333;
 	height:25px;
-
+}
+#dropdownmenu{
+	background-color: #777777;
+	width: 150px;
+	position: relative;
+}
+#bdropdownmenu{
+	display:;
+	padding-top:36px;
+	display:none;
 }
 #content{
 padding-top:40px;

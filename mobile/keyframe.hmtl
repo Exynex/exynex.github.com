@@ -1,0 +1,24 @@
+
+
+<div id="container">
+    <header>
+	    <h1>Animated Photo Banner</h1>
+	    <p>Lorem ipsum dolor...</p>
+    </header>
+ 
+    <!-- Each image is 350px by 233px -->
+    <div class="photobanner">
+    	<img class="first" src="image-1.jpg" alt="" />
+    	<img src="image-2.jpg" alt="" />
+    	<img src="image-3.jpg" alt="" />
+    	<img src="image-4.jpg" alt="" />
+    	<img src="image-5.jpg" alt="" />
+    	<img src="image-6.jpg" alt="" />
+    	<img src="image-1.jpg" alt="" />
+    	<img src="image-2.jpg" alt="" />
+    	<img src="image-3.jpg" alt="" />
+    	<img src="image-4.jpg" alt="" />
+    </div>
+</div>
+
+
