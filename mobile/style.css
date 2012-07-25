@@ -52,7 +52,7 @@ border-bottom:2px solid #33B5E5;
 	height:75px;
 }
 #menunav{
-padding-top:60px;
+padding-top:5px;
 width:100%;
 -moz-box-shadow: 0 0 30px 5px #999;
 -webkit-box-shadow: 2px 2px 4px 1px #000;
@@ -71,19 +71,19 @@ div.inline{
 	padding-top: 0px;
 }
 #bhome{
-	width:25%;
+	width:24%;
 	background-color: #333333;
 	height:25px;
 	border-right:2px solid gray;
 }
 #bprojects{
-	width:25%;
+	width:24%;
 	background-color: #333333;
 	height:25px;
 	border-right:2px solid gray;
 }
 #bphotography{
-	width:25%;
+	width:24%;
 	background-color: #333333;
 	height:25px;
 	border-right:2px solid gray;
