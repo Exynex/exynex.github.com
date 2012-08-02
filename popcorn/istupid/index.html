@@ -19,6 +19,11 @@
 	<link id="globalheader-enhanced-stylesheet" rel="stylesheet" href="apple_files/enhanced.css" type="text/css">
 <!-- apple stuff ENDS-->
 
+<!-- video js -->
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+<!--video js ENDS -->
+
 <!-- my own stuff sSTARTS-->
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -28,6 +33,7 @@
 <script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
 <script type="text/javascript">
 $(function(){
+//document.getElementById('video').play();
 var pop = Popcorn( "#video" );
 /* 
 pop.webpage({
@@ -41,7 +47,7 @@ var p = Popcorn( "#video" ).footnote({
    start: 5,
    end: 15,
    text: 'This text will appear in "target". ',
-   target: "footnotediv"
+   target: "fornotedivone"
 });
 
 
@@ -75,30 +81,39 @@ html{
 <article id="billboard" class="content selfclear" data-hires="true">
   <br>
 	<div class="inline" style="">
-         <video height="320" id="video" controls>
+         <video id="video" height="320" controls="hide"  autoplay="">
              <source src="video.webm" type='video/webm'/>
              <source src="video.ogv" type='video/ogg'/>
              <source src="video.mp4" type='video/mp4'/>
          </video>
 </div>
 <table class="inline" style="width:20px; height:50%;"><th ></th></table>
-
+<!-- first div -->
 <div id="popcont" class="inline">
     <div class="inotbar">
-      <p style="text-align:left; float:left;">verizon</p>12:00PM<p style="text-align:right; float:right;"><img src="battery.png" style="height:15px;"/></p>
+      <p style="text-align:left; float:left;">AT&amp;T</p><script type="text/javascript" src="time.js"></script><p style="text-align:right; float:right;"><img src="battery.png" style="height:15px;"/></p>
     </div>
+<!-- content here -->
+<div id="footnotedivone"></div>
+
 
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<div style="position:fixed; padding-left:25px;">
-  <div id="popcont2">
-    <div class="inotbar">
-      <p style="text-align:left; float:left;">verizon</p>12:00PM<p style="text-align:right; float:right;"><img src="battery.png" style="height:15px;"/></p>
+<!-- second div here -->
+<div style="position:absolute; padding-left:25px; padding-top:340px;">
+<div id="popcont2">
+<div class="inotbar">
+<p style="text-align:left; float:left;">AT&amp;T</p>
+<script type="text/javascript" src="time.js"></script>
+<p style="text-align:right; float:right;"><img src="battery.png" style="height:15px;"/></p>
     </div>
+<!--content here -->
 
-  </div>
+
+
+
+</div>
 </div>
 
 
