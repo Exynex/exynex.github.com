@@ -5,18 +5,18 @@ font-family;Arial;
 color:gray;}
 
 p {
-color:gray;
+color:white;
 font-family:Arial;
 
 }
 
 p.text{
-color:gray;
+color:white;
 font-family:Arial;
 
 }
 h1{
-color:gray;
+color:white;
 font-family:Arial;
 
 }
@@ -99,3 +99,54 @@ color:gray;
 
 .bordered{border-color:white;}
 a img.bordered:hover {border-color:magenta;}
+
+/////////// apple stuff by me ///////////////////////////
+
+div#card{
+  height:100%;
+}
+video#video{
+  width:;
+  padding-left:25px;
+}
+div#main{
+    width:1050px;
+}
+iframe#webpages-a{
+  /*width:100%;*/
+  height:385px;
+  
+}
+div.inline { 
+      float:left; 
+ }
+ table.inline{
+ 	float:left;
+ }
+body{
+  width: 100%;
+  height: 100%;
+}
+#popcont{
+  background-image:url('apple-bg.png');
+  background-repeat:repeat;
+  background-color: #cccccc;
+  position: ;
+  height:570px;
+  width:350px;
+}
+#popcont2{
+  background-image:url('apple-bg.png');
+  background-repeat:repeat;
+  background-color: #cccccc;
+  padding-top:;
+  position:fixed ;
+  height:228px;
+  width:570px;
+}
+div.inotbar{
+	background-color: black;
+	color:white;
+	position: relative;
+	text-align: center;
+}
