@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
+	<title>Apple sucks!</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="icon.png" />
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+<!--apple stuff STARTS-->
+	<link id="globalheader-stylesheet" rel="stylesheet" href="apple_files/navigation.css" type="text/css">	
+	<meta name="omni_page" content="Apple - Index/Tab">
+	<meta name="Keywords" content="Apple sucks">
+	<meta name="Description" content=".">
+	<link rel="home" href="http://www.apple.com/">
+	<link rel="index" href="http://www.apple.com/sitemap/">
+	<link rel="stylesheet" href="apple_files/base.css" type="text/css">
+	<link rel="stylesheet" href="apple_files/billboard_002.css" type="text/css">
+	<link id="globalheader-enhanced-stylesheet" rel="stylesheet" href="apple_files/enhanced.css" type="text/css">
+<!-- apple stuff ENDS-->
+
+<!-- my own stuff sSTARTS-->
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script type="text/javascript" src="http://code.jquery.com/jquery-git.js"></script>
+<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var pop = Popcorn( "#video" );
+
+pop.webpage({
+        id: "webpages-a",
+        start: 0,
+        end: 10,
+        src: "http://android.com",
+        target: "card"
+      });
+pop.play();
+});
+</script>
+<style type="text/css">
+body {
+    background-color:#cccccc;
+    height:100%;
+} 
+html{
+	background-color:#cccccc;
+    height:100%;
+}
+div#card{
+  height:100%;
+}
+div#video{
+  width:;
+}
+div#main{
+    width:1050px;
+}
+iframe#webpages-a{
+  /*width:100%;*/
+  height:385px;
+  
+}
+div.inline { 
+      float:left; 
+   }
+body{
+  width: 100%;
+  height: 100%;
+}
+</style>
+<!-- my own stuff ENDS-->
+
+</head>
+<body id="home" class="home">
+<nav id="globalheader">
+<p>iPhone, not as good as you blind people think..</p>
+</nav>
+<article id="billboard" class="content selfclear" data-hires="true">
+	<div class="inline">
+         <video height="320" id="video" controls>
+             <source src="video.webm" type='video/webm'/>
+             <source src="video.ogv" type='video/ogg'/>
+             <source src="video.mp4" type='video/mp4'/>
+         </video>
+</div>
+<div id="card" class="inline"></div>
+</div>
+</article>
+
+	
+
+</body></html>
