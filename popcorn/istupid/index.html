@@ -1,45 +1,72 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-<script src="http://vjs.zencdn.net/c/video.js"></script>
-<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>iframe test</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-git.js"></script>
+<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <script type="text/javascript">
-document.addEventListener( "DOMContentLoaded", function () {
-  var popcorn = Popcorn( "#video" );
-  popcorn.footnote({
-    start:3,
-    end:20,
-    target:"footnote",
-    text: "<h1>Yay! I finally appeared :D</h1>"
-  });
-  var pop = Popcorn( "#video" );
-    pop.webpage({
+$(function(){
+var pop = Popcorn( "#video" );
+
+pop.webpage({
         id: "webpages-a",
-        start:4,
-        end:15,
-        src: "http://www.facebook.com/",
-        target: "footnote"
+        start: 0,
+        end: 10,
+        src: "http://android.com",
+        target: "webpagedisv"
       });
-}, false);
-
-
+pop.play();
+});
 </script>
-<style>
-div#footnote{
-  background-color:orange;
-  width:100%;
+<style type="text/css">
+body {
+    background-image:url('apple-bg.png');
+    background-repeat:repeat;
+} 
+div#webpagediv{
   height:100%;
-  border:3px;
-  border-color:gray;
 }
+div#video{
+  width:;
+}
+div#main{
+    width:1050px;
+}
+iframe#webpages-a{
+  /*width:100%;*/
+  height:385px;
+  
+}
+div.inline { 
+      float:left; 
+   }
 </style>
 </head>
 <body>
-
-<video id="video" controls class="video-js vjs-default-skin"controls preload="auto"width="640"height="360"data-setup="{}"autoplay=""> 
-<source src="istupid.ogv" type='video/ogg'>
-</video>
-<div id="footnote"></div>
+<div style="position:fixed; color:blacl; font-family:Arial">
+  <ul style="list-style-type: none;">
+    <li>You're on the most stable version(test2). <br>Other copies:</li>
+    <li><a href="test.html">test1</a></li>
+    <li><a href="index.html">main</a></li>
+  </ul>
+</div>
+<div align="center">
+<div id="main">
+<div align="center"
+    <font style="font-color:black; font-size:40px; font-family:Arial;">not as advanced as people think</font><br><br>
+</div>
+<div class="inline">
+         <video height="390" id="video" controls>
+             <source src="istupid.ogv"/>
+         </video>
+</div>
+         <div id="webpagediv" class="inline"></div>
+</div>
+</div>
 </body>
 </html>

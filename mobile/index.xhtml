@@ -21,11 +21,22 @@
 </head>
 
 <body style="
-	background: url(../rec/img/android_bg_holo.png) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;">
+background-image: linear-gradient(bottom, rgb(211,197,252) 0%, rgb(186,164,245) 36%, rgb(0,0,0) 100%);
+background-image: -o-linear-gradient(bottom, rgb(211,197,252) 0%, rgb(186,164,245) 36%, rgb(0,0,0) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(211,197,252) 0%, rgb(186,164,245) 36%, rgb(0,0,0) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(211,197,252) 0%, rgb(186,164,245) 36%, rgb(0,0,0) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(211,197,252) 0%, rgb(186,164,245) 36%, rgb(0,0,0) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(211,197,252)),
+	color-stop(0.36, rgb(186,164,245)),
+	color-stop(1, rgb(0,0,0))
+);
+height:100%;
+">
 <!--start actionbar and menu-->
 <div id="actionbarmenunav">
 <div id="actionbar">
