@@ -134,6 +134,7 @@ body{
   position: ;
   height:570px;
   width:350px;
+  color: white;
 }
 #popcont2{
   background-image:url('apple-bg.png');
@@ -141,8 +142,9 @@ body{
   background-color: #cccccc;
   padding-top:;
   position: ;
-  height:228px;
+  height:245px;
   width:570px;
+  color: white;
 }
 div.inotbar{
 	background-color: black;
