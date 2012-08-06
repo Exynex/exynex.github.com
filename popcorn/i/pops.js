@@ -17,7 +17,7 @@
              start: 4,
              end: 9,
              target: "popcont2",
-             text: "<div align=\"center\"><img src=\"googleplay.png\" style=\"height:190px;padding-top:0px;\"/></div>"
+             text: "<div align=\"center\"><img src=\"googleplay.png\" style=\"height:170px;padding-top:0px;\"/></div>"
            });
             popcorn.footnote({
              start: 7,
