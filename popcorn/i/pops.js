@@ -2,11 +2,23 @@
            var popcorn = Popcorn( "#video" );
  
            popcorn.footnote({
-             start: 0.5,
+             start: 0.2,
              end: 3.5,
              target: "popcont",
              text: "<div align=\"center\"><h1>Android<br><img src=\"android-logo.png\" style=\"height:100px;\"/><br>Blackberry<br><img src=\"blackberry-logo.png\" style=\"height:90px;\"/><br>WindowsPhone<br><img src=\"wp8-logo.png\" style=\"height:90px;\"/><br>Symbian<br><img src=\"symbian-os-logo.png\" style=\"height:90px;\"/></h1></div>"
            });
+           popcorn.footnote({
+             start: 2.5,
+             end: 3,
+             target: "popcont2",
+             text: "<div align=\"center\"><h1>Firefox OS<br><img src=\"firefox-os-logo.png\" style=\"height:170px;\"/></div>"
+           });
+           popcorn.footnote({
+             start: 3,
+             end: 3.5,
+             target: "popcont2",
+             text: "<div align=\"center\"><p style=\"padding-top:60px; font-size:100px;\">;)</p></div>"
+           });           
             popcorn.footnote({
              start: 4,
              end: 9,
@@ -57,15 +69,27 @@
            });
              popcorn.footnote({
              start: 21,
-             end: 27,
+             end: 23,
              target: "popcont",
              text: "<div align=\"center\"><img src=\"starcbucks-ss.png\" style=\"padding-top:10px;\"/></div>"
            });
              popcorn.footnote({
              start: 21,
-             end: 27,
+             end: 23,
              target: "popcont2",
              text: "<div align=\"center\" style=\"padding-top:30px;\"><h1>This on my Galaxy Nexus<br>-----></h1></div>"
+           });
+             popcorn.footnote({
+             start: 23,
+             end: 28,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:30px;\"><img src=\"android-beam-pic.png\" style=\"height:100px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 23,
+             end: 28,
+             target: "popcont2",
+             text: "<div align=\"center\" style=\"padding-top:30px;\"><h4>Why u no haz</h4><div align=\"center\"><img src=\"trol.png\" style=\"height:100px;\"/><img src=\"nfc-logo.png\" style=\"height:100px;\"/></div></div>"
            });
              popcorn.footnote({
              start: 29,
