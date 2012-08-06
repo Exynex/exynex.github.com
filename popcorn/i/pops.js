@@ -5,7 +5,7 @@
              start: 0.5,
              end: 3.5,
              target: "popcont",
-             text: "<div align=\"center\"><h1>ANDROID ftw!!!</h1></div>"
+             text: "<div align=\"center\"><h1>Android<br><img src=\"android-logo.png\" style=\"height:100px;\"/><br>Blackberry<br><img src=\"blackberry-logo.png\" style=\"height:90px;\"/><br>WindowsPhone<br><img src=\"wp8-logo.png\" style=\"height:90px;\"/><br>Symbian<br><img src=\"symbian-os-logo.png\" style=\"height:90px;\"/></h1></div>"
            });
             popcorn.footnote({
              start: 4,
