@@ -68,13 +68,13 @@
              text: "<div align=\"center\"><img src=\"remote-dl.png\" style=\"padding-top:20px;\"/></div>"
            });
              popcorn.footnote({
-             start: 21,
+             start: 20,
              end: 23,
              target: "popcont",
              text: "<div align=\"center\"><img src=\"starcbucks-ss.png\" style=\"padding-top:10px;\"/></div>"
            });
              popcorn.footnote({
-             start: 21,
+             start: 20,
              end: 23,
              target: "popcont2",
              text: "<div align=\"center\" style=\"padding-top:30px;\"><h1>This on my Galaxy Nexus<br>-----></h1></div>"
@@ -83,13 +83,13 @@
              start: 23,
              end: 28,
              target: "popcont",
-             text: "<div align=\"center\" style=\"padding-top:30px;\"><img src=\"android-beam-pic.png\" style=\"height:100px;\"/></div>"
+             text: "<div align=\"center\" style=\"padding-top:30px;\"><img src=\"android-beam-pic.png\" style=\"height:170px;\"/><br><img src=\"android-beam.png\" style=\"height:120px;\"/><img src=\"nfc-googlewallet.png\" style=\"height:190px;\"/></div>"
            });
              popcorn.footnote({
              start: 23,
              end: 28,
              target: "popcont2",
-             text: "<div align=\"center\" style=\"padding-top:30px;\"><h4>Why u no haz</h4><div align=\"center\"><img src=\"trol.png\" style=\"height:100px;\"/><img src=\"nfc-logo.png\" style=\"height:100px;\"/></div></div>"
+             text: "<div align=\"center\" style=\"padding-top:30px;\"><h1>Why u no haz NFC iphone?</h1><div align=\"center\"><img src=\"troll.png\" style=\"height:120px;\"/><img src=\"nfc-logo.png\" style=\"height:120px;\"/></div></div>"
            });
              popcorn.footnote({
              start: 29,
