@@ -283,6 +283,132 @@
              target: "popcont2",
              text: "<div align=\"center\"><br><br><br><br><br><h1>Btw, it syncs everything automatically<br>FOR FREE!</h1></div>"
            });
+             popcorn.footnote({
+             start: 93,
+             end: 95,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"google-books.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 93,
+             end: 95,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>I have Google Books</h1></div>"
+           });
+             popcorn.footnote({
+             start: 95,
+             end: 98,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"kindle.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 95,
+             end: 98,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>And<br>Kindle Books</h1></div>"
+           });
+             popcorn.footnote({
+             start: 98,
+             end: 102,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"more-books.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 98,
+             end: 102,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>AND MORE!!!</h1></div>"
+           });
+             popcorn.footnote({
+             start: 102,
+             end: 106,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"play-book-store.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 102,
+             end: 106.6,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>I have Play Book Store</h1></div>"
+           });
+             popcorn.footnote({
+             start: 103.5,
+             end: 106.6,
+             target: "popcont2",
+             text: "<div align=\"center\"><h1>an entire book store in my pocket</h1></div>"
+           });
+             popcorn.footnote({
+             start: 106.6,
+             end: 109,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><h1>Suzane Collins</h1><img src=\"certain-author.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 106.6,
+             end: 109,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>I looked for my certain author</h1></div>"
+           });
+             popcorn.footnote({
+             start: 109,
+             end: 112.5,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><h1>NYT Best Sellers</h1><img src=\"nyt-best-seller.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 109,
+             end: 112.5,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>Hey look! ----></h1></div>"
+           });
+             popcorn.footnote({
+             start: 112.5,
+             end: 115,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><h1>Catching Fire</h1><img src=\"good-book.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 112.5,
+             end: 115,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>My good book<br>+</h1><h2>free samples</h2></div>"
+           });
+             popcorn.footnote({
+             start: 115,
+             end: 122,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><h1>Tab the buy button</h1><img src=\"tap-away.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 115,
+             end: 122,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><h1>A tap away :)</h1></div>"
+           });
+             popcorn.footnote({
+             start: 122.5,
+             end: 126.7,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"rain-q.png\" style=\"width:275px;\"/><img src=\"rain-q.png\" style=\"width:275px;\"/><img src=\"rain-q.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 122.5,
+             end: 126.7,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><br><br><p style=\"font-size:100px;\">Is that rain?</p></div>"
+           });
+             popcorn.footnote({
+             start: 126.7,
+             end: 130,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"dys.png\" style=\"width:275px;\"/><img src=\"dys.png\" style=\"width:275px;\"/><img src=\"dys.png\" style=\"width:275px;\"/><img src=\"dys.png\" style=\"width:275px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 126.7,
+             end: 130,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><p style=\"font-size:60px;\">Don't you say<br><br><br><br>say O=</p></div>"
+           });
          }, false )
 
 /*
