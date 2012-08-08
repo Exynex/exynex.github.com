@@ -409,6 +409,54 @@
              target: "popcont2",
              text: "<div align=\"center\"><br><br><br><p style=\"font-size:60px;\">Don't you say<br><br><br><br>say O=</p></div>"
            });
+             popcorn.footnote({
+             start: 130,
+             end: 139,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"soup-deliver.png\" style=\"width:295px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 130,
+             end: 139,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><p style=\"font-size:60px;\">Google Now<br><br><br>more accurate:<br><br><br><a href=\"http://www.youtube.com/watch?v=kw-RzN4xYyE&list=UUBJycsmduvYEL83R_U4JriQ&index=8&feature=plcp\">HERE'S WHY</a></p></div>"
+           });
+             popcorn.footnote({
+             start: 139,
+             end: 145,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"remind-me.png\" style=\"width:295px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 139,
+             end: 145,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><p style=\"font-size:60px;\">Remind me to clean<br><br><br>up</p></div>"
+           });
+             popcorn.footnote({
+             start: 145,
+             end: 148.5,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"play-skrillex.png\" style=\"width:295px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 145,
+             end: 148.5,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><p style=\"font-size:60px;\">Play<br><br><br>Skrillex</p></div>"
+           });
+             popcorn.footnote({
+             start: 148.5,
+             end: 162,
+             target: "popcont",
+             text: "<div align=\"center\" style=\"padding-top:2px;\"><img src=\"playing-skrillex.png\" style=\"width:295px;\"/></div>"
+           });
+             popcorn.footnote({
+             start: 148.5,
+             end: 162,
+             target: "popcont2",
+             text: "<div align=\"center\"><br><br><br><p style=\"font-size:60px;\">Playing<br><br><br>Skrillex<br><br><br></p></div>"
+           });
          }, false )
 
 /*
