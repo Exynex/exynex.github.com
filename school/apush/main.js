@@ -21,7 +21,7 @@ $("div.dcolor").fadeOut("slow");
 function check(form)/*function to check userid & password*/
 {
 /*the following code checkes whether the entered userid and password are matching*/
-if(form.userid.value == "mrko" && form.pswrd.value == "awesomekevin")
+if(form.userid.value == "mrko" && form.pswrd.value == "givekevinana")
 {
 /*opens the target page while Id & password matches*/
 $("div.logins").fadeOut("slow");
@@ -30,7 +30,7 @@ $("div.dhw").fadeIn("slow");
 }
 else
 {
-alert("Wrong Password or Username, please try again or email me for help")/*displays error message*/
+alert("Wrong Password or Username\nplease try again or email me for help\n\nkeven.gs@gmail.com")/*displays error message*/
 }
 }
         
