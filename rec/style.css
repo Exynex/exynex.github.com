@@ -15,11 +15,33 @@ color:gray;
 font-family:'Comic Sans MS', 'Arial';
 
 }
+h1{
+color:gray;
+font-family:Arial;
+
+}
+h2{
+color:gray;
+font-family:Arial;
+
+}
+h3{
+color:gray;
+font-family:Arial;
+
+}
+h4{
+color:gray;
+font-family:Arial;
+
+}
 
 
 a:link { 
 color:magenta;
-text-decoration:none;}
+text-decoration:none;
+font-family:Arial;
+}
 
 a:visited {
 color:magenta;

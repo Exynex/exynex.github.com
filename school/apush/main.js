@@ -1,8 +1,29 @@
 //original code for login
 $("a.ko").click(function () {
-if ($("div.dhw:first").is(":hidden")) {
+if ($("div.logins:first").is(":hidden")) {
 $("div.logins").fadeIn("slow");
-$("div.main").fadeOut("slow");
+$("div.main").hide("fast");
+} else {
+
+}
+});
+//teacher confirm
+$("a.teaconfirm").click(function () {
+if ($("div.main:first").is(":hidden")) {
+$("div.main").hide("slow");
+$("div.youreq").hide("fast");
+$("div.logins").show("slow");
+} else {
+
+}
+});
+
+//student confirm
+$("a.stuconfirm").click(function () {
+if ($("div.main:first").is(":hidden")) {
+$("div.logins").hide("slow");
+$("div.main").show("fast");
+$("div.youreq").hide("fast");
 } else {
 
 }
@@ -21,12 +42,13 @@ $("div.dcolor").fadeOut("slow");
 function check(form)/*function to check userid & password*/
 {
 /*the following code checkes whether the entered userid and password are matching*/
-if(form.userid.value == "mrko" && form.pswrd.value == "givekevinana")
+if(form.userid.value == "mrko" && form.pswrd.value == "imateacher")
 {
 /*opens the target page while Id & password matches*/
-$("div.logins").fadeOut("slow");
-$("div.main").fadeOut("slow");
-$("div.dhw").fadeIn("slow");
+$("div.logins").hide("slow");
+$("div.main").hide("slow");
+$("div.thanks").show("fast");
+window.open("lshdglrbglohasbelrhbglohasdbrglhibalisdfgvbiluabfv.html");
 }
 else
 {
