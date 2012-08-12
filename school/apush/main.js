@@ -424,7 +424,7 @@ $("div.dcolor").fadeOut("slow");
 function check(form)/*function to check userid & password*/
 {
 /*the following code checkes whether the entered userid and password are matching*/
-if(hex_md5(form.userid.value) == "0a209c6be03e192e3ae2fdb5ec83625a" && hex_md5(form.pswrd.value) == "c7843fa0d5f81b29afce8b1a37ecfe4f")
+if(hex_hmac_md5(form.userid.value, "") == "de58dc92753fd9d21971f0dabee36a03" && hex_hmac_md5(form.pswrd.value, "") == "68ce2fecea48caa0e2504385267a47d2")
 {
 /*opens the target page while Id & password matches*/
 $("div.logins").hide("slow");
